@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Elegance | Fashion & Beauty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FAF6F0; /* सॉफ्ट एस्थेटिक बैकग्राउंड */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            padding: 70px 20px 40px;
+            background: linear-gradient(to right, #EADBC8, #F8F0E5);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            color: #4A403A;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+        .header p {
+            font-size: 1.2em;
+            color: #7A6C62;
+            margin-top: 15px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: #ffffff;
+            width: 220px;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #4A403A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+        .card span {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+        .card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            margin: 0 0 15px 0;
+        }
+        .btn-text {
+            font-weight: 600;
+            color: #C08261;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85em;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Global Elegance ✨</h1>
+        <p>Curated Fusion Fashion, Beauty & Timeless Accessories.</p>
+    </div>
+
+    <div class="container">
+        <a href="/sarees" class="card">
+            <span>👗</span>
+            <h2>Elegant Sarees</h2>
+            <div class="btn-text">Shop Now ➔</div>
+        </a>
+        
+        <a href="/watches" class="card">
+            <span>⌚</span>
+            <h2>Luxury Watches</h2>
+            <div class="btn-text">Shop Now ➔</div>
+        </a>
+
+        <a href="/beauty" class="card">
+            <span>💄</span>
+            <h2>Beauty Finds</h2>
+            <div class="btn-text">Shop Now ➔</div>
+        </a>
+
+        <a href="/shoes" class="card">
+            <span>👟</span>
+            <h2>Trendy Shoes</h2>
+            <div class="btn-text">Shop Now ➔</div>
+        </a>
+    </div>
+
+</body>
+</html>
