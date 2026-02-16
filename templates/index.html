@@ -6,126 +6,30 @@
     <title>Global Elegance | Curated Fashion & Beauty</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #FAF6F0;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
+        body { font-family: 'Poppins', sans-serif; background-color: #FAF6F0; color: #333; text-align: center; margin: 0; padding: 0; scroll-behavior: smooth; }
+        .header { padding: 70px 20px 30px; background: linear-gradient(to right, #EADBC8, #F8F0E5); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .header h1 { font-family: 'Playfair Display', serif; font-size: 3.5em; color: #4A403A; margin: 0; letter-spacing: 1px; }
+        .header p { font-size: 1.2em; color: #7A6C62; margin-top: 15px; }
         
-        /* Header Section */
-        .header {
-            padding: 70px 20px 30px;
-            background: linear-gradient(to right, #EADBC8, #F8F0E5);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-        .header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
-            color: #4A403A;
-            margin: 0;
-            letter-spacing: 1px;
-        }
-        .header p {
-            font-size: 1.2em;
-            color: #7A6C62;
-            margin-top: 15px;
-        }
-
         /* Navigation Bar */
-        .nav-bar {
-            background-color: #ffffff;
-            padding: 15px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .nav-bar a {
-            text-decoration: none;
-            color: #4A403A;
-            font-weight: 600;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 8px 15px;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .nav-bar a:hover {
-            background-color: #C08261;
-            color: #ffffff;
-        }
+        .nav-bar { background-color: #ffffff; padding: 15px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        .nav-bar a { text-decoration: none; color: #4A403A; font-weight: 600; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; padding: 8px 15px; border-radius: 20px; transition: all 0.3s ease; }
+        .nav-bar a:hover { background-color: #C08261; color: #ffffff; }
 
         /* Category Sections */
-        .category-section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            color: #4A403A;
-            margin-bottom: 40px;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 3px;
-            background-color: #C08261;
-            bottom: -10px;
-            left: 25%;
-            border-radius: 2px;
-        }
+        .category-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2.5em; color: #4A403A; margin-bottom: 40px; position: relative; display: inline-block; }
+        .section-title::after { content: ''; position: absolute; width: 50%; height: 3px; background-color: #C08261; bottom: -10px; left: 25%; border-radius: 2px; }
 
-        /* Links Grid */
-        .link-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 20px;
-        }
-        .item-link {
-            background-color: #ffffff;
-            padding: 20px 15px;
-            border-radius: 15px;
-            text-decoration: none;
-            color: #7A6C62;
-            font-weight: 600;
-            font-size: 1em;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #f0e9e1;
-        }
-        .item-link:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(192, 130, 97, 0.2);
-            background-color: #C08261;
-            color: #ffffff;
-            border-color: #C08261;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #4A403A;
-            color: #FAF6F0;
-            padding: 30px 20px;
-            margin-top: 50px;
-            font-size: 0.9em;
-        }
+        /* Product Grid & Cards */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 30px; }
+        .product-card { background-color: #ffffff; border-radius: 15px; padding: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.04); transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; border: 1px solid #f0e9e1; }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(192, 130, 97, 0.15); border-color: #C08261; }
+        .product-img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; background-color: #f9f9f9; }
+        .product-title { font-size: 1em; color: #4A403A; font-weight: 600; margin: 0 0 15px 0; height: 45px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .amz-btn { background-color: #C08261; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-weight: 600; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; margin-top: auto; transition: background 0.3s; width: 80%; display: block; }
+        .amz-btn:hover { background-color: #A0684B; }
+        .footer { background-color: #4A403A; color: #FAF6F0; padding: 30px 20px; margin-top: 50px; font-size: 0.9em; }
     </style>
 </head>
 <body>
@@ -150,186 +54,186 @@
 
     <div id="sarees" class="category-section">
         <h2 class="section-title">👗 Elegant Sarees</h2>
-        <div class="link-grid">
-            <a href="https://amzn.to/4ayYJcF" class="item-link" target="_blank">Saree 1</a>
-            <a href="https://amzn.to/4ahO2w8" class="item-link" target="_blank">Saree 2</a>
-            <a href="https://amzn.to/3MLiQMI" class="item-link" target="_blank">Saree 3</a>
-            <a href="https://amzn.to/4qDuQO8" class="item-link" target="_blank">Saree 4</a>
-            <a href="https://amzn.to/4rVnlmR" class="item-link" target="_blank">Saree 5</a>
-            <a href="https://amzn.to/4rSRy64" class="item-link" target="_blank">Saree 6</a>
-            <a href="https://amzn.to/4qCGAQU" class="item-link" target="_blank">Saree 7</a>
-            <a href="https://amzn.to/3OJHBcF" class="item-link" target="_blank">Saree 8</a>
-            <a href="https://amzn.to/4reqMFe" class="item-link" target="_blank">Saree 9</a>
-            <a href="https://amzn.to/3OrHEtC" class="item-link" target="_blank">Saree 10</a>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Saree+1" class="product-img"><h3 class="product-title">Elegant Saree Collection</h3><a href="https://amzn.to/4ayYJcF" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Saree+2" class="product-img"><h3 class="product-title">Designer Wear Saree</h3><a href="https://amzn.to/4ahO2w8" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Saree+3" class="product-img"><h3 class="product-title">Traditional Silk Saree</h3><a href="https://amzn.to/3MLiQMI" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Saree+4" class="product-img"><h3 class="product-title">Party Wear Saree</h3><a href="https://amzn.to/4qDuQO8" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Saree+5" class="product-img"><h3 class="product-title">Classic Cotton Saree</h3><a href="https://amzn.to/4rVnlmR" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Saree+6" class="product-img"><h3 class="product-title">Festive Collection Saree</h3><a href="https://amzn.to/4rSRy64" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Saree+7" class="product-img"><h3 class="product-title">Premium Saree</h3><a href="https://amzn.to/4qCGAQU" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Saree+8" class="product-img"><h3 class="product-title">Wedding Collection Saree</h3><a href="https://amzn.to/3OJHBcF" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Saree+9" class="product-img"><h3 class="product-title">Luxury Saree</h3><a href="https://amzn.to/4reqMFe" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Saree+10" class="product-img"><h3 class="product-title">Exclusive Saree</h3><a href="https://amzn.to/3OrHEtC" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
     <div id="salwar-suits" class="category-section">
         <h2 class="section-title">🌸 Salwar Suits</h2>
-        <div class="link-grid">
-            <a href="https://amzn.to/4rV7xk5" class="item-link" target="_blank">Salwar Suit 1</a>
-            <a href="https://amzn.to/3ZAbezD" class="item-link" target="_blank">Salwar Suit 2</a>
-            <a href="https://amzn.to/3ZGWHSJ" class="item-link" target="_blank">Salwar Suit 3</a>
-            <a href="https://amzn.to/46ajgTz" class="item-link" target="_blank">Salwar Suit 4</a>
-            <a href="https://amzn.to/4rk5DcN" class="item-link" target="_blank">Salwar Suit 5</a>
-            <a href="https://amzn.to/4rlHO4w" class="item-link" target="_blank">Salwar Suit 6</a>
-            <a href="https://amzn.to/46927tp" class="item-link" target="_blank">Salwar Suit 7</a>
-            <a href="https://amzn.to/46c7fgi" class="item-link" target="_blank">Salwar Suit 8</a>
-            <a href="https://amzn.to/4akSFWd" class="item-link" target="_blank">Salwar Suit 9</a>
-            <a href="https://amzn.to/3Mylh5h" class="item-link" target="_blank">Salwar Suit 10</a>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Suit+1" class="product-img"><h3 class="product-title">Designer Salwar Suit</h3><a href="https://amzn.to/4rV7xk5" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Suit+2" class="product-img"><h3 class="product-title">Party Wear Suit</h3><a href="https://amzn.to/3ZAbezD" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Suit+3" class="product-img"><h3 class="product-title">Casual Printed Suit</h3><a href="https://amzn.to/3ZGWHSJ" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Suit+4" class="product-img"><h3 class="product-title">Festive Salwar Suit</h3><a href="https://amzn.to/46ajgTz" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Suit+5" class="product-img"><h3 class="product-title">Elegant Cotton Suit</h3><a href="https://amzn.to/4rk5DcN" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Suit+6" class="product-img"><h3 class="product-title">Traditional Kurti Set</h3><a href="https://amzn.to/4rlHO4w" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Suit+7" class="product-img"><h3 class="product-title">Luxury Ethnic Wear</h3><a href="https://amzn.to/46927tp" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Suit+8" class="product-img"><h3 class="product-title">Classic Salwar Kameez</h3><a href="https://amzn.to/46c7fgi" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Suit+9" class="product-img"><h3 class="product-title">Premium Suit Set</h3><a href="https://amzn.to/4akSFWd" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Suit+10" class="product-img"><h3 class="product-title">Beautiful Festive Wear</h3><a href="https://amzn.to/3Mylh5h" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
     <div id="beauty" class="category-section">
         <h2 class="section-title">💄 Beauty Finds</h2>
-        <div class="link-grid">
-            <a href="https://amzn.to/4tzRgTr" class="item-link" target="_blank">Beauty Find 1</a>
-            <a href="https://amzn.to/4kXxFIZ" class="item-link" target="_blank">Beauty Find 2</a>
-            <a href="https://amzn.to/4tBm2uY" class="item-link" target="_blank">Beauty Find 3</a>
-            <a href="https://amzn.to/3Msgp1C" class="item-link" target="_blank">Beauty Find 4</a>
-            <a href="https://amzn.to/4tymWZ7" class="item-link" target="_blank">Beauty Find 5</a>
-            <a href="https://amzn.to/4tCXv8V" class="item-link" target="_blank">Beauty Find 6</a>
-            <a href="https://amzn.to/4tDgQa3" class="item-link" target="_blank">Beauty Find 7</a>
-            <a href="https://amzn.to/3Msgwdy" class="item-link" target="_blank">Beauty Find 8</a>
-            <a href="https://amzn.to/4kABVh0" class="item-link" target="_blank">Beauty Find 9</a>
-            <a href="https://amzn.to/4cwaO4O" class="item-link" target="_blank">Beauty Find 10</a>
-            <a href="https://amzn.to/4c3iUlr" class="item-link" target="_blank">Beauty Find 11</a>
-            <a href="https://amzn.to/4ajr0oF" class="item-link" target="_blank">Beauty Find 12</a>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+1" class="product-img"><h3 class="product-title">Premium Skincare</h3><a href="https://amzn.to/4tzRgTr" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+2" class="product-img"><h3 class="product-title">Luxury Makeup Set</h3><a href="https://amzn.to/4kXxFIZ" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+3" class="product-img"><h3 class="product-title">Daily Essential Cream</h3><a href="https://amzn.to/4tBm2uY" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+4" class="product-img"><h3 class="product-title">Hair Care Routine</h3><a href="https://amzn.to/3Msgp1C" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+5" class="product-img"><h3 class="product-title">Glowing Serum</h3><a href="https://amzn.to/4tymWZ7" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+6" class="product-img"><h3 class="product-title">Radiant Foundation</h3><a href="https://amzn.to/4tCXv8V" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+7" class="product-img"><h3 class="product-title">Long Lasting Lipstick</h3><a href="https://amzn.to/4tDgQa3" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+8" class="product-img"><h3 class="product-title">Professional Palette</h3><a href="https://amzn.to/3Msgwdy" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+9" class="product-img"><h3 class="product-title">Hydrating Moisturizer</h3><a href="https://amzn.to/4kABVh0" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+10" class="product-img"><h3 class="product-title">Cleansing Routine</h3><a href="https://amzn.to/4cwaO4O" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+11" class="product-img"><h3 class="product-title">Beauty Gift Set</h3><a href="https://amzn.to/4c3iUlr" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Beauty+12" class="product-img"><h3 class="product-title">Fragrance Perfume</h3><a href="https://amzn.to/4ajr0oF" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
     <div id="handbags" class="category-section">
         <h2 class="section-title">👜 Luxury Handbags</h2>
-        <div class="link-grid">
-            <a href="https://amzn.to/3Oh2D2k" class="item-link" target="_blank">Handbag 1</a>
-            <a href="https://amzn.to/4rQwop3" class="item-link" target="_blank">Handbag 2</a>
-            <a href="https://amzn.to/3Ojbalp" class="item-link" target="_blank">Handbag 3</a>
-            <a href="https://amzn.to/4tDfhc3" class="item-link" target="_blank">Handbag 4</a>
-            <a href="https://amzn.to/3OhslDU" class="item-link" target="_blank">Handbag 5</a>
-            <a href="https://amzn.to/4tFdH9I" class="item-link" target="_blank">Handbag 6</a>
-            <a href="https://amzn.to/4tzE5Sp" class="item-link" target="_blank">Handbag 7</a>
-            <a href="https://amzn.to/4kzu976" class="item-link" target="_blank">Handbag 8</a>
-            <a href="https://amzn.to/4tzSduZ" class="item-link" target="_blank">Handbag 9</a>
-            <a href="https://amzn.to/4kJxvVu" class="item-link" target="_blank">Handbag 10</a>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Handbag+1" class="product-img"><h3 class="product-title">Classic Leather Tote</h3><a href="https://amzn.to/3Oh2D2k" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Handbag+2" class="product-img"><h3 class="product-title">Designer Crossbody</h3><a href="https://amzn.to/4rQwop3" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Handbag+3" class="product-img"><h3 class="product-title">Elegant Clutch</h3><a href="https://amzn.to/3Ojbalp" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Handbag+4" class="product-img"><h3 class="product-title">Everyday Shoulder Bag</h3><a href="https://amzn.to/4tDfhc3" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Handbag+5" class="product-img"><h3 class="product-title">Luxury Handbag</h3><a href="https://amzn.to/3OhslDU" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Handbag+6" class="product-img"><h3 class="product-title">Premium Purse</h3><a href="https://amzn.to/4tFdH9I" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Handbag+7" class="product-img"><h3 class="product-title">Fashion Satchel</h3><a href="https://amzn.to/4tzE5Sp" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Handbag+8" class="product-img"><h3 class="product-title">Trendy Mini Bag</h3><a href="https://amzn.to/4kzu976" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Handbag+9" class="product-img"><h3 class="product-title">Casual Canvas Tote</h3><a href="https://amzn.to/4tzSduZ" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Handbag+10" class="product-img"><h3 class="product-title">Office Work Bag</h3><a href="https://amzn.to/4kJxvVu" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
     <div id="earrings" class="category-section">
         <h2 class="section-title">💎 Elegant Earrings</h2>
-        <div class="link-grid">
-            <a href="https://amzn.to/4qFr7j8" class="item-link" target="_blank">Earring 1</a>
-            <a href="https://amzn.to/4kExKRl" class="item-link" target="_blank">Earring 2</a>
-            <a href="https://amzn.to/3OKq4B9" class="item-link" target="_blank">Earring 3</a>
-            <a href="https://amzn.to/4qECrfC" class="item-link" target="_blank">Earring 4</a>
-            <a href="https://amzn.to/4bSXQhl" class="item-link" target="_blank">Earring 5</a>
-            <a href="https://amzn.to/3OJIj9P" class="item-link" target="_blank">Earring 6</a>
-            <a href="https://amzn.to/4rRFRwr" class="item-link" target="_blank">Earring 7</a>
-            <a href="https://amzn.to/4rTeKRE" class="item-link" target="_blank">Earring 8</a>
-            <a href="https://amzn.to/4qDvBqs" class="item-link" target="_blank">Earring 9</a>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Earring+1" class="product-img"><h3 class="product-title">Crystal Stud Earrings</h3><a href="https://amzn.to/4qFr7j8" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Earring+2" class="product-img"><h3 class="product-title">Gold Plated Hoops</h3><a href="https://amzn.to/4kExKRl" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Earring+3" class="product-img"><h3 class="product-title">Diamond Drop Earrings</h3><a href="https://amzn.to/3OKq4B9" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Earring+4" class="product-img"><h3 class="product-title">Pearl Elegance</h3><a href="https://amzn.to/4qECrfC" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Earring+5" class="product-img"><h3 class="product-title">Silver Statement</h3><a href="https://amzn.to/4bSXQhl" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Earring+6" class="product-img"><h3 class="product-title">Vintage Chandelier</h3><a href="https://amzn.to/3OJIj9P" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Earring+7" class="product-img"><h3 class="product-title">Minimalist Studs</h3><a href="https://amzn.to/4rRFRwr" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Earring+8" class="product-img"><h3 class="product-title">Party Wear Jewels</h3><a href="https://amzn.to/4rTeKRE" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Earring+9" class="product-img"><h3 class="product-title">Bridal Collection</h3><a href="https://amzn.to/4qDvBqs" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
     <div id="womens-shoes" class="category-section">
         <h2 class="section-title">👠 Women's Shoes</h2>
-        <div class="link-grid">
-            <a href="https://amzn.to/4qHsrlQ" class="item-link" target="_blank">Shoe 1</a>
-            <a href="https://amzn.to/4aPWpz8" class="item-link" target="_blank">Shoe 2</a>
-            <a href="https://amzn.to/4rWNfqw" class="item-link" target="_blank">Shoe 3</a>
-            <a href="https://amzn.to/3OkvNgW" class="item-link" target="_blank">Shoe 4</a>
-            <a href="https://amzn.to/4kGLWcI" class="item-link" target="_blank">Shoe 5</a>
-            <a href="https://amzn.to/4aEzR37" class="item-link" target="_blank">Shoe 6</a>
-            <a href="https://amzn.to/46vjRiT" class="item-link" target="_blank">Shoe 7</a>
-            <a href="https://amzn.to/4tzM9CJ" class="item-link" target="_blank">Shoe 8</a>
-            <a href="https://amzn.to/3Ob2iON" class="item-link" target="_blank">Shoe 9</a>
-            <a href="https://amzn.to/3OIB41U" class="item-link" target="_blank">Shoe 10</a>
-            <a href="https://amzn.to/3ZGStKR" class="item-link" target="_blank">Shoe 11</a>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+1" class="product-img"><h3 class="product-title">Comfort Running Shoes</h3><a href="https://amzn.to/4qHsrlQ" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+2" class="product-img"><h3 class="product-title">Classic White Sneakers</h3><a href="https://amzn.to/4aPWpz8" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+3" class="product-img"><h3 class="product-title">Elegant High Heels</h3><a href="https://amzn.to/4rWNfqw" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+4" class="product-img"><h3 class="product-title">Casual Flats</h3><a href="https://amzn.to/3OkvNgW" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+5" class="product-img"><h3 class="product-title">Daily Wear Sandals</h3><a href="https://amzn.to/4kGLWcI" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+6" class="product-img"><h3 class="product-title">Premium Boots</h3><a href="https://amzn.to/4aEzR37" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+7" class="product-img"><h3 class="product-title">Sports Footwear</h3><a href="https://amzn.to/46vjRiT" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+8" class="product-img"><h3 class="product-title">Walking Slip-ons</h3><a href="https://amzn.to/4tzM9CJ" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+9" class="product-img"><h3 class="product-title">Designer Wedges</h3><a href="https://amzn.to/3Ob2iON" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+10" class="product-img"><h3 class="product-title">Office Wear Loafers</h3><a href="https://amzn.to/3OIB41U" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Shoe+11" class="product-img"><h3 class="product-title">Party Wear Heels</h3><a href="https://amzn.to/3ZGStKR" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
     <div id="womens-watches" class="category-section">
         <h2 class="section-title">⌚ Women's Watches</h2>
-        <div class="link-grid">
-            <a href="https://amzn.to/46aifLf" class="item-link" target="_blank">Watch 1</a>
-            <a href="https://amzn.to/3Ow0FLv" class="item-link" target="_blank">Watch 2</a>
-            <a href="https://amzn.to/3MtdaXG" class="item-link" target="_blank">Watch 3</a>
-            <a href="https://amzn.to/3OkzmUm" class="item-link" target="_blank">Watch 4</a>
-            <a href="https://amzn.to/4alORUN" class="item-link" target="_blank">Watch 5</a>
-            <a href="https://amzn.to/3MrKkXI" class="item-link" target="_blank">Watch 6</a>
-            <a href="https://amzn.to/4kABjrI" class="item-link" target="_blank">Watch 7</a>
-            <a href="https://amzn.to/4kBh90Q" class="item-link" target="_blank">Watch 8</a>
-            <a href="https://amzn.to/4tzR5HL" class="item-link" target="_blank">Watch 9</a>
-            <a href="https://amzn.to/4cgvIFd" class="item-link" target="_blank">Watch 10</a>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Watch+1" class="product-img"><h3 class="product-title">Rose Gold Dial Watch</h3><a href="https://amzn.to/46aifLf" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Watch+2" class="product-img"><h3 class="product-title">Classic Leather Watch</h3><a href="https://amzn.to/3Ow0FLv" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Watch+3" class="product-img"><h3 class="product-title">Luxury Diamond Watch</h3><a href="https://amzn.to/3MtdaXG" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Watch+4" class="product-img"><h3 class="product-title">Minimalist Silver Watch</h3><a href="https://amzn.to/3OkzmUm" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Watch+5" class="product-img"><h3 class="product-title">Designer Smartwatch</h3><a href="https://amzn.to/4alORUN" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Watch+6" class="product-img"><h3 class="product-title">Elegant Bracelet Watch</h3><a href="https://amzn.to/3MrKkXI" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Watch+7" class="product-img"><h3 class="product-title">Premium Analog Watch</h3><a href="https://amzn.to/4kABjrI" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Watch+8" class="product-img"><h3 class="product-title">Casual Daily Watch</h3><a href="https://amzn.to/4kBh90Q" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Watch+9" class="product-img"><h3 class="product-title">Fashion Chronograph</h3><a href="https://amzn.to/4tzR5HL" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=W+Watch+10" class="product-img"><h3 class="product-title">Vintage Collection</h3><a href="https://amzn.to/4cgvIFd" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
     <div id="mens-casuals" class="category-section">
         <h2 class="section-title">👕 Men's Casual Wear</h2>
-        <div class="link-grid">
-            <a href="https://amzn.to/4ajrk6R" class="item-link" target="_blank">Casual Wear 1</a>
-            <a href="https://amzn.to/4bT3Y9i" class="item-link" target="_blank">Casual Wear 2</a>
-            <a href="https://amzn.to/40euTFm" class="item-link" target="_blank">Casual Wear 3</a>
-            <a href="https://amzn.to/4ayQJIB" class="item-link" target="_blank">Casual Wear 4</a>
-            <a href="https://amzn.to/4axFIXV" class="item-link" target="_blank">Casual Wear 5</a>
-            <a href="https://amzn.to/40hjAw4" class="item-link" target="_blank">Casual Wear 6</a>
-            <a href="https://amzn.to/4qy0LiZ" class="item-link" target="_blank">Casual Wear 7</a>
-            <a href="https://amzn.to/40e9CM2" class="item-link" target="_blank">Casual Wear 8</a>
-            <a href="https://amzn.to/4ayZYIR" class="item-link" target="_blank">Casual Wear 9</a>
-            <a href="https://amzn.to/4rNI9ww" class="item-link" target="_blank">Casual Wear 10</a>
-            <a href="https://amzn.to/40bfTYO" class="item-link" target="_blank">Casual Wear 11</a>
-            <a href="https://amzn.to/3MyHjou" class="item-link" target="_blank">Casual Wear 12</a>
-            <a href="https://amzn.to/466t4hh" class="item-link" target="_blank">Casual Wear 13</a>
-            <a href="https://amzn.to/4aRmsWK" class="item-link" target="_blank">Casual Wear 14</a>
-            <a href="https://amzn.to/4aTa3S3" class="item-link" target="_blank">Casual Wear 15</a>
-            <a href="https://amzn.to/4tDfrQH" class="item-link" target="_blank">Casual Wear 16</a>
-            <a href="https://amzn.to/4aSD2FF" class="item-link" target="_blank">Casual Wear 17</a>
-            <a href="https://amzn.to/4alDEUc" class="item-link" target="_blank">Casual Wear 18</a>
-            <a href="https://amzn.to/4kMtqzO" class="item-link" target="_blank">Casual Wear 19</a>
-            <a href="https://amzn.to/4allFxd" class="item-link" target="_blank">Casual Wear 20</a>
-            <a href="https://amzn.to/4aEUufL" class="item-link" target="_blank">Casual Wear 21</a>
-            <a href="https://amzn.to/3MxmIRi" class="item-link" target="_blank">Casual Wear 22</a>
-            <a href="https://amzn.to/4kAkLAe" class="item-link" target="_blank">Casual Wear 23</a>
-            <a href="https://amzn.to/40d3q72" class="item-link" target="_blank">Casual Wear 24</a>
-            <a href="https://amzn.to/40hjRPC" class="item-link" target="_blank">Casual Wear 25</a>
-            <a href="https://amzn.to/3MNl8eh" class="item-link" target="_blank">Casual Wear 26</a>
-            <a href="https://amzn.to/4qFkcGL" class="item-link" target="_blank">Casual Wear 27</a>
-            <a href="https://amzn.to/40arjMv" class="item-link" target="_blank">Casual Wear 28</a>
-            <a href="https://amzn.to/4se5pEn" class="item-link" target="_blank">Casual Wear 29</a>
-            <a href="https://amzn.to/3OqkVhx" class="item-link" target="_blank">Casual Wear 30</a>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+1" class="product-img"><h3 class="product-title">Classic T-Shirt</h3><a href="https://amzn.to/4ajrk6R" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+2" class="product-img"><h3 class="product-title">Denim Jacket</h3><a href="https://amzn.to/4bT3Y9i" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+3" class="product-img"><h3 class="product-title">Cotton Chinos</h3><a href="https://amzn.to/40euTFm" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+4" class="product-img"><h3 class="product-title">Polo Shirt</h3><a href="https://amzn.to/4ayQJIB" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+5" class="product-img"><h3 class="product-title">Casual Hoodie</h3><a href="https://amzn.to/4axFIXV" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+6" class="product-img"><h3 class="product-title">Printed Shirt</h3><a href="https://amzn.to/40hjAw4" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+7" class="product-img"><h3 class="product-title">Sweatpants</h3><a href="https://amzn.to/4qy0LiZ" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+8" class="product-img"><h3 class="product-title">Summer Shorts</h3><a href="https://amzn.to/40e9CM2" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+9" class="product-img"><h3 class="product-title">V-Neck Sweater</h3><a href="https://amzn.to/4ayZYIR" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+10" class="product-img"><h3 class="product-title">Linen Shirt</h3><a href="https://amzn.to/4rNI9ww" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+11" class="product-img"><h3 class="product-title">Bomber Jacket</h3><a href="https://amzn.to/40bfTYO" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+12" class="product-img"><h3 class="product-title">Graphic Tee</h3><a href="https://amzn.to/3MyHjou" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+13" class="product-img"><h3 class="product-title">Slim Fit Jeans</h3><a href="https://amzn.to/466t4hh" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+14" class="product-img"><h3 class="product-title">Flannel Shirt</h3><a href="https://amzn.to/4aRmsWK" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+15" class="product-img"><h3 class="product-title">Track Suit</h3><a href="https://amzn.to/4aTa3S3" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+16" class="product-img"><h3 class="product-title">Cargo Pants</h3><a href="https://amzn.to/4tDfrQH" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+17" class="product-img"><h3 class="product-title">Pullover Sweatshirt</h3><a href="https://amzn.to/4aSD2FF" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+18" class="product-img"><h3 class="product-title">Winter Coat</h3><a href="https://amzn.to/4alDEUc" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+19" class="product-img"><h3 class="product-title">Activewear Tee</h3><a href="https://amzn.to/4kMtqzO" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+20" class="product-img"><h3 class="product-title">Jogger Pants</h3><a href="https://amzn.to/4allFxd" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+21" class="product-img"><h3 class="product-title">Basic Henley</h3><a href="https://amzn.to/4aEUufL" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+22" class="product-img"><h3 class="product-title">Windbreaker</h3><a href="https://amzn.to/3MxmIRi" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+23" class="product-img"><h3 class="product-title">Striped T-Shirt</h3><a href="https://amzn.to/4kAkLAe" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+24" class="product-img"><h3 class="product-title">Khaki Shorts</h3><a href="https://amzn.to/40d3q72" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+25" class="product-img"><h3 class="product-title">Oxford Shirt</h3><a href="https://amzn.to/40hjRPC" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+26" class="product-img"><h3 class="product-title">Fleece Jacket</h3><a href="https://amzn.to/3MNl8eh" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+27" class="product-img"><h3 class="product-title">Athletic Shorts</h3><a href="https://amzn.to/4qFkcGL" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+28" class="product-img"><h3 class="product-title">Turtleneck Sweater</h3><a href="https://amzn.to/40arjMv" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+29" class="product-img"><h3 class="product-title">Casual Blazer</h3><a href="https://amzn.to/4se5pEn" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Casual+30" class="product-img"><h3 class="product-title">Puffer Vest</h3><a href="https://amzn.to/3OqkVhx" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
     <div id="mens-shoes" class="category-section">
         <h2 class="section-title">👟 Men's Shoes</h2>
-        <div class="link-grid">
-            <a href="https://amzn.to/4kGhsYf" class="item-link" target="_blank">Shoe 1</a>
-            <a href="https://amzn.to/4ayU76l" class="item-link" target="_blank">Shoe 2</a>
-            <a href="https://amzn.to/4qFm1U2" class="item-link" target="_blank">Shoe 3</a>
-            <a href="https://amzn.to/4qI8viL" class="item-link" target="_blank">Shoe 4</a>
-            <a href="https://amzn.to/4qDqpms" class="item-link" target="_blank">Shoe 5</a>
-            <a href="https://amzn.to/3ZBCcqD" class="item-link" target="_blank">Shoe 6</a>
-            <a href="https://amzn.to/4rSo7kq" class="item-link" target="_blank">Shoe 7</a>
-            <a href="https://amzn.to/4rvVw4A" class="item-link" target="_blank">Shoe 8</a>
-            <a href="https://amzn.to/4tFfLyg" class="item-link" target="_blank">Shoe 9</a>
-            <a href="https://amzn.to/4tCSDAF" class="item-link" target="_blank">Shoe 10</a>
-            <a href="https://amzn.to/4qA0X1f" class="item-link" target="_blank">Shoe 11</a>
-            <a href="https://amzn.to/4ct6G5x" class="item-link" target="_blank">Shoe 12</a>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+1" class="product-img"><h3 class="product-title">Sport Running Shoes</h3><a href="https://amzn.to/4kGhsYf" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+2" class="product-img"><h3 class="product-title">Casual Sneakers</h3><a href="https://amzn.to/4ayU76l" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+3" class="product-img"><h3 class="product-title">Formal Leather Shoes</h3><a href="https://amzn.to/4qFm1U2" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+4" class="product-img"><h3 class="product-title">Canvas Slip-ons</h3><a href="https://amzn.to/4qI8viL" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+5" class="product-img"><h3 class="product-title">Outdoor Hiking Boots</h3><a href="https://amzn.to/4qDqpms" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+6" class="product-img"><h3 class="product-title">Everyday Loafers</h3><a href="https://amzn.to/3ZBCcqD" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+7" class="product-img"><h3 class="product-title">Gym Trainers</h3><a href="https://amzn.to/4rSo7kq" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+8" class="product-img"><h3 class="product-title">Premium Oxfords</h3><a href="https://amzn.to/4rvVw4A" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+9" class="product-img"><h3 class="product-title">Summer Sandals</h3><a href="https://amzn.to/4tFfLyg" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+10" class="product-img"><h3 class="product-title">Classic High-Tops</h3><a href="https://amzn.to/4tCSDAF" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+11" class="product-img"><h3 class="product-title">Lightweight Walking Shoes</h3><a href="https://amzn.to/4qA0X1f" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Shoe+12" class="product-img"><h3 class="product-title">Fashion Boots</h3><a href="https://amzn.to/4ct6G5x" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
     <div id="mens-watches" class="category-section">
         <h2 class="section-title">⌚ Men's Watches</h2>
-        <div class="link-grid">
-            <a href="https://amzn.to/3ZGSoXz" class="item-link" target="_blank">Watch 1</a>
-            <a href="https://amzn.to/4rjT80O" class="item-link" target="_blank">Watch 2</a>
-            <a href="https://amzn.to/46F9jNY" class="item-link" target="_blank">Watch 3</a>
-            <a href="https://amzn.to/4rWNIJi" class="item-link" target="_blank">Watch 4</a>
-            <a href="https://amzn.to/4ayttdx" class="item-link" target="_blank">Watch 5</a>
-            <a href="https://amzn.to/4azqQrU" class="item-link" target="_blank">Watch 6</a>
-            <a href="https://amzn.to/4tDdaoL" class="item-link" target="_blank">Watch 7</a>
-            <a href="https://amzn.to/4rZidyh" class="item-link" target="_blank">Watch 8</a>
-            <a href="https://amzn.to/4kJDuJU" class="item-link" target="_blank">Watch 9</a>
-            <a href="https://amzn.to/3Ob2Jsp" class="item-link" target="_blank">Watch 10</a>
-            <a href="https://amzn.to/4cw79nA" class="item-link" target="_blank">Watch 11</a>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+1" class="product-img"><h3 class="product-title">Luxury Chronograph</h3><a href="https://amzn.to/3ZGSoXz" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+2" class="product-img"><h3 class="product-title">Classic Leather Strap</h3><a href="https://amzn.to/4rjT80O" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+3" class="product-img"><h3 class="product-title">Sport Digital Watch</h3><a href="https://amzn.to/46F9jNY" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+4" class="product-img"><h3 class="product-title">Minimalist Analog</h3><a href="https://amzn.to/4rWNIJi" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+5" class="product-img"><h3 class="product-title">Smart Fitness Watch</h3><a href="https://amzn.to/4ayttdx" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+6" class="product-img"><h3 class="product-title">Premium Steel Band</h3><a href="https://amzn.to/4azqQrU" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+7" class="product-img"><h3 class="product-title">Military Tactical Watch</h3><a href="https://amzn.to/4tDdaoL" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+8" class="product-img"><h3 class="product-title">Waterproof Dive Watch</h3><a href="https://amzn.to/4rZidyh" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+9" class="product-img"><h3 class="product-title">Everyday Casual Watch</h3><a href="https://amzn.to/4kJDuJU" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+10" class="product-img"><h3 class="product-title">Designer Dress Watch</h3><a href="https://amzn.to/3Ob2Jsp" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=M+Watch+11" class="product-img"><h3 class="product-title">Exclusive Gold Tone</h3><a href="https://amzn.to/4cw79nA" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
