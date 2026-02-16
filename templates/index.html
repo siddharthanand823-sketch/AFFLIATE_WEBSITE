@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Elegance | Fashion & Beauty</title>
+    <title>Global Elegance | Curated Fashion & Beauty</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #FAF6F0; /* सॉफ्ट एस्थेटिक बैकग्राउंड */
+            background-color: #FAF6F0;
             color: #333;
             text-align: center;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
+        
+        /* Header Section */
         .header {
-            padding: 70px 20px 40px;
+            padding: 70px 20px 30px;
             background: linear-gradient(to right, #EADBC8, #F8F0E5);
             box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
@@ -31,49 +34,97 @@
             color: #7A6C62;
             margin-top: 15px;
         }
-        .container {
+
+        /* Navigation Bar */
+        .nav-bar {
+            background-color: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px;
-            padding: 50px 20px;
-            max-width: 1000px; /* 8 कार्ड्स के लिए परफेक्ट चौड़ाई */
-            margin: 0 auto;
+            gap: 15px;
         }
-        .card {
-            background-color: #ffffff;
-            width: 200px; /* कार्ड का साइज़ थोड़ा एडजस्ट किया है ताकि सब सुंदर दिखें */
-            padding: 35px 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            transition: all 0.3s ease;
+        .nav-bar a {
             text-decoration: none;
             color: #4A403A;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-        }
-        .card span {
-            font-size: 3.5em;
-            margin-bottom: 15px;
-        }
-        .card h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4em;
-            margin: 0 0 15px 0;
-            text-align: center;
-        }
-        .btn-text {
             font-weight: 600;
-            color: #C08261;
+            font-size: 0.9em;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.85em;
-            margin-top: auto;
+            letter-spacing: 1px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .nav-bar a:hover {
+            background-color: #C08261;
+            color: #ffffff;
+        }
+
+        /* Category Sections */
+        .category-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #4A403A;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: #C08261;
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+        }
+
+        /* Links Grid */
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+        }
+        .item-link {
+            background-color: #ffffff;
+            padding: 20px 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #7A6C62;
+            font-weight: 600;
+            font-size: 1em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #f0e9e1;
+        }
+        .item-link:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(192, 130, 97, 0.2);
+            background-color: #C08261;
+            color: #ffffff;
+            border-color: #C08261;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #4A403A;
+            color: #FAF6F0;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -81,59 +132,210 @@
 
     <div class="header">
         <h1>Global Elegance ✨</h1>
-        <p>Curated Fusion Fashion, Beauty & Timeless Accessories.</p>
+        <p>Your Curated Destination for Fashion, Beauty & Accessories.</p>
     </div>
 
-    <div class="container">
-        
-        <a href="https://amzn.to/आपका_साड़ी_वाला_लिंक" class="card" target="_blank">
-            <span>👗</span>
-            <h2>Elegant Sarees</h2>
-            <div class="btn-text">Shop Now ➔</div>
-        </a>
-        
-        <a href="https://amzn.to/आपका_घड़ी_वाला_लिंक" class="card" target="_blank">
-            <span>⌚</span>
-            <h2>Luxury Watches</h2>
-            <div class="btn-text">Shop Now ➔</div>
-        </a>
+    <div class="nav-bar">
+        <a href="#mens-casuals">Men's Casuals</a>
+        <a href="#mens-shoes">Men's Shoes</a>
+        <a href="#womens-shoes">Women's Shoes</a>
+        <a href="#mens-watches">Men's Watches</a>
+        <a href="#womens-watches">Women's Watches</a>
+        <a href="#sarees">Sarees</a>
+        <a href="#salwar-suits">Salwar Suits</a>
+        <a href="#handbags">Handbags</a>
+        <a href="#earrings">Earrings</a>
+        <a href="#beauty">Beauty Finds</a>
+    </div>
 
-        <a href="https://amzn.to/आपका_ब्यूटी_वाला_लिंक" class="card" target="_blank">
-            <span>💄</span>
-            <h2>Beauty Finds</h2>
-            <div class="btn-text">Shop Now ➔</div>
-        </a>
+    <div id="mens-casuals" class="category-section">
+        <h2 class="section-title">👕 Men's Casual Wear</h2>
+        <div class="link-grid">
+            <a href="https://amzn.to/4ajrk6R" class="item-link" target="_blank">Casual Wear 1</a>
+            <a href="https://amzn.to/4bT3Y9i" class="item-link" target="_blank">Casual Wear 2</a>
+            <a href="https://amzn.to/40euTFm" class="item-link" target="_blank">Casual Wear 3</a>
+            <a href="https://amzn.to/4ayQJIB" class="item-link" target="_blank">Casual Wear 4</a>
+            <a href="https://amzn.to/4axFIXV" class="item-link" target="_blank">Casual Wear 5</a>
+            <a href="https://amzn.to/40hjAw4" class="item-link" target="_blank">Casual Wear 6</a>
+            <a href="https://amzn.to/4qy0LiZ" class="item-link" target="_blank">Casual Wear 7</a>
+            <a href="https://amzn.to/40e9CM2" class="item-link" target="_blank">Casual Wear 8</a>
+            <a href="https://amzn.to/4ayZYIR" class="item-link" target="_blank">Casual Wear 9</a>
+            <a href="https://amzn.to/4rNI9ww" class="item-link" target="_blank">Casual Wear 10</a>
+            <a href="https://amzn.to/40bfTYO" class="item-link" target="_blank">Casual Wear 11</a>
+            <a href="https://amzn.to/3MyHjou" class="item-link" target="_blank">Casual Wear 12</a>
+            <a href="https://amzn.to/466t4hh" class="item-link" target="_blank">Casual Wear 13</a>
+            <a href="https://amzn.to/4aRmsWK" class="item-link" target="_blank">Casual Wear 14</a>
+            <a href="https://amzn.to/4aTa3S3" class="item-link" target="_blank">Casual Wear 15</a>
+            <a href="https://amzn.to/4tDfrQH" class="item-link" target="_blank">Casual Wear 16</a>
+            <a href="https://amzn.to/4aSD2FF" class="item-link" target="_blank">Casual Wear 17</a>
+            <a href="https://amzn.to/4alDEUc" class="item-link" target="_blank">Casual Wear 18</a>
+            <a href="https://amzn.to/4kMtqzO" class="item-link" target="_blank">Casual Wear 19</a>
+            <a href="https://amzn.to/4allFxd" class="item-link" target="_blank">Casual Wear 20</a>
+            <a href="https://amzn.to/4aEUufL" class="item-link" target="_blank">Casual Wear 21</a>
+            <a href="https://amzn.to/3MxmIRi" class="item-link" target="_blank">Casual Wear 22</a>
+            <a href="https://amzn.to/4kAkLAe" class="item-link" target="_blank">Casual Wear 23</a>
+            <a href="https://amzn.to/40d3q72" class="item-link" target="_blank">Casual Wear 24</a>
+            <a href="https://amzn.to/40hjRPC" class="item-link" target="_blank">Casual Wear 25</a>
+            <a href="https://amzn.to/3MNl8eh" class="item-link" target="_blank">Casual Wear 26</a>
+            <a href="https://amzn.to/4qFkcGL" class="item-link" target="_blank">Casual Wear 27</a>
+            <a href="https://amzn.to/40arjMv" class="item-link" target="_blank">Casual Wear 28</a>
+            <a href="https://amzn.to/4se5pEn" class="item-link" target="_blank">Casual Wear 29</a>
+            <a href="https://amzn.to/3OqkVhx" class="item-link" target="_blank">Casual Wear 30</a>
+        </div>
+    </div>
 
-        <a href="https://amzn.to/आपका_शूज_वाला_लिंक" class="card" target="_blank">
-            <span>👟</span>
-            <h2>Trendy Shoes</h2>
-            <div class="btn-text">Shop Now ➔</div>
-        </a>
+    <div id="mens-shoes" class="category-section">
+        <h2 class="section-title">👟 Men's Shoes</h2>
+        <div class="link-grid">
+            <a href="https://amzn.to/4kGhsYf" class="item-link" target="_blank">Shoe 1</a>
+            <a href="https://amzn.to/4ayU76l" class="item-link" target="_blank">Shoe 2</a>
+            <a href="https://amzn.to/4qFm1U2" class="item-link" target="_blank">Shoe 3</a>
+            <a href="https://amzn.to/4qI8viL" class="item-link" target="_blank">Shoe 4</a>
+            <a href="https://amzn.to/4qDqpms" class="item-link" target="_blank">Shoe 5</a>
+            <a href="https://amzn.to/3ZBCcqD" class="item-link" target="_blank">Shoe 6</a>
+            <a href="https://amzn.to/4rSo7kq" class="item-link" target="_blank">Shoe 7</a>
+            <a href="https://amzn.to/4rvVw4A" class="item-link" target="_blank">Shoe 8</a>
+            <a href="https://amzn.to/4tFfLyg" class="item-link" target="_blank">Shoe 9</a>
+            <a href="https://amzn.to/4tCSDAF" class="item-link" target="_blank">Shoe 10</a>
+            <a href="https://amzn.to/4qA0X1f" class="item-link" target="_blank">Shoe 11</a>
+            <a href="https://amzn.to/4ct6G5x" class="item-link" target="_blank">Shoe 12</a>
+        </div>
+    </div>
 
-        <a href="https://amzn.to/आपका_हैंडबैग_वाला_लिंक" class="card" target="_blank">
-            <span>👜</span>
-            <h2>Luxury Handbags</h2>
-            <div class="btn-text">Shop Now ➔</div>
-        </a>
+    <div id="womens-shoes" class="category-section">
+        <h2 class="section-title">👠 Women's Shoes</h2>
+        <div class="link-grid">
+            <a href="https://amzn.to/4qHsrlQ" class="item-link" target="_blank">Shoe 1</a>
+            <a href="https://amzn.to/4aPWpz8" class="item-link" target="_blank">Shoe 2</a>
+            <a href="https://amzn.to/4rWNfqw" class="item-link" target="_blank">Shoe 3</a>
+            <a href="https://amzn.to/3OkvNgW" class="item-link" target="_blank">Shoe 4</a>
+            <a href="https://amzn.to/4kGLWcI" class="item-link" target="_blank">Shoe 5</a>
+            <a href="https://amzn.to/4aEzR37" class="item-link" target="_blank">Shoe 6</a>
+            <a href="https://amzn.to/46vjRiT" class="item-link" target="_blank">Shoe 7</a>
+            <a href="https://amzn.to/4tzM9CJ" class="item-link" target="_blank">Shoe 8</a>
+            <a href="https://amzn.to/3Ob2iON" class="item-link" target="_blank">Shoe 9</a>
+            <a href="https://amzn.to/3OIB41U" class="item-link" target="_blank">Shoe 10</a>
+            <a href="https://amzn.to/3ZGStKR" class="item-link" target="_blank">Shoe 11</a>
+        </div>
+    </div>
 
-        <a href="https://amzn.to/आपका_मेंस_ड्रेस_का_लिंक" class="card" target="_blank">
-            <span>👕</span>
-            <h2>Men's Casuals</h2>
-            <div class="btn-text">Shop Now ➔</div>
-        </a>
+    <div id="mens-watches" class="category-section">
+        <h2 class="section-title">⌚ Men's Watches</h2>
+        <div class="link-grid">
+            <a href="https://amzn.to/3ZGSoXz" class="item-link" target="_blank">Watch 1</a>
+            <a href="https://amzn.to/4rjT80O" class="item-link" target="_blank">Watch 2</a>
+            <a href="https://amzn.to/46F9jNY" class="item-link" target="_blank">Watch 3</a>
+            <a href="https://amzn.to/4rWNIJi" class="item-link" target="_blank">Watch 4</a>
+            <a href="https://amzn.to/4ayttdx" class="item-link" target="_blank">Watch 5</a>
+            <a href="https://amzn.to/4azqQrU" class="item-link" target="_blank">Watch 6</a>
+            <a href="https://amzn.to/4tDdaoL" class="item-link" target="_blank">Watch 7</a>
+            <a href="https://amzn.to/4rZidyh" class="item-link" target="_blank">Watch 8</a>
+            <a href="https://amzn.to/4kJDuJU" class="item-link" target="_blank">Watch 9</a>
+            <a href="https://amzn.to/3Ob2Jsp" class="item-link" target="_blank">Watch 10</a>
+            <a href="https://amzn.to/4cw79nA" class="item-link" target="_blank">Watch 11</a>
+        </div>
+    </div>
 
-        <a href="https://amzn.to/आपका_सलवार_सूट_का_लिंक" class="card" target="_blank">
-            <span>🌸</span>
-            <h2>Salwar Suits</h2>
-            <div class="btn-text">Shop Now ➔</div>
-        </a>
+    <div id="womens-watches" class="category-section">
+        <h2 class="section-title">⌚ Women's Watches</h2>
+        <div class="link-grid">
+            <a href="https://amzn.to/46aifLf" class="item-link" target="_blank">Watch 1</a>
+            <a href="https://amzn.to/3Ow0FLv" class="item-link" target="_blank">Watch 2</a>
+            <a href="https://amzn.to/3MtdaXG" class="item-link" target="_blank">Watch 3</a>
+            <a href="https://amzn.to/3OkzmUm" class="item-link" target="_blank">Watch 4</a>
+            <a href="https://amzn.to/4alORUN" class="item-link" target="_blank">Watch 5</a>
+            <a href="https://amzn.to/3MrKkXI" class="item-link" target="_blank">Watch 6</a>
+            <a href="https://amzn.to/4kABjrI" class="item-link" target="_blank">Watch 7</a>
+            <a href="https://amzn.to/4kBh90Q" class="item-link" target="_blank">Watch 8</a>
+            <a href="https://amzn.to/4tzR5HL" class="item-link" target="_blank">Watch 9</a>
+            <a href="https://amzn.to/4cgvIFd" class="item-link" target="_blank">Watch 10</a>
+        </div>
+    </div>
 
-        <a href="https://amzn.to/आपका_इयररिंग्स_का_लिंक" class="card" target="_blank">
-            <span>💎</span>
-            <h2>Elegant Earrings</h2>
-            <div class="btn-text">Shop Now ➔</div>
-        </a>
+    <div id="sarees" class="category-section">
+        <h2 class="section-title">👗 Elegant Sarees</h2>
+        <div class="link-grid">
+            <a href="https://amzn.to/4ayYJcF" class="item-link" target="_blank">Saree 1</a>
+            <a href="https://amzn.to/4ahO2w8" class="item-link" target="_blank">Saree 2</a>
+            <a href="https://amzn.to/3MLiQMI" class="item-link" target="_blank">Saree 3</a>
+            <a href="https://amzn.to/4qDuQO8" class="item-link" target="_blank">Saree 4</a>
+            <a href="https://amzn.to/4rVnlmR" class="item-link" target="_blank">Saree 5</a>
+            <a href="https://amzn.to/4rSRy64" class="item-link" target="_blank">Saree 6</a>
+            <a href="https://amzn.to/4qCGAQU" class="item-link" target="_blank">Saree 7</a>
+            <a href="https://amzn.to/3OJHBcF" class="item-link" target="_blank">Saree 8</a>
+            <a href="https://amzn.to/4reqMFe" class="item-link" target="_blank">Saree 9</a>
+            <a href="https://amzn.to/3OrHEtC" class="item-link" target="_blank">Saree 10</a>
+        </div>
+    </div>
 
+    <div id="salwar-suits" class="category-section">
+        <h2 class="section-title">🌸 Salwar Suits</h2>
+        <div class="link-grid">
+            <a href="https://amzn.to/4rV7xk5" class="item-link" target="_blank">Salwar Suit 1</a>
+            <a href="https://amzn.to/3ZAbezD" class="item-link" target="_blank">Salwar Suit 2</a>
+            <a href="https://amzn.to/3ZGWHSJ" class="item-link" target="_blank">Salwar Suit 3</a>
+            <a href="https://amzn.to/46ajgTz" class="item-link" target="_blank">Salwar Suit 4</a>
+            <a href="https://amzn.to/4rk5DcN" class="item-link" target="_blank">Salwar Suit 5</a>
+            <a href="https://amzn.to/4rlHO4w" class="item-link" target="_blank">Salwar Suit 6</a>
+            <a href="https://amzn.to/46927tp" class="item-link" target="_blank">Salwar Suit 7</a>
+            <a href="https://amzn.to/46c7fgi" class="item-link" target="_blank">Salwar Suit 8</a>
+            <a href="https://amzn.to/4akSFWd" class="item-link" target="_blank">Salwar Suit 9</a>
+            <a href="https://amzn.to/3Mylh5h" class="item-link" target="_blank">Salwar Suit 10</a>
+        </div>
+    </div>
+
+    <div id="handbags" class="category-section">
+        <h2 class="section-title">👜 Luxury Handbags</h2>
+        <div class="link-grid">
+            <a href="https://amzn.to/3Oh2D2k" class="item-link" target="_blank">Handbag 1</a>
+            <a href="https://amzn.to/4rQwop3" class="item-link" target="_blank">Handbag 2</a>
+            <a href="https://amzn.to/3Ojbalp" class="item-link" target="_blank">Handbag 3</a>
+            <a href="https://amzn.to/4tDfhc3" class="item-link" target="_blank">Handbag 4</a>
+            <a href="https://amzn.to/3OhslDU" class="item-link" target="_blank">Handbag 5</a>
+            <a href="https://amzn.to/4tFdH9I" class="item-link" target="_blank">Handbag 6</a>
+            <a href="https://amzn.to/4tzE5Sp" class="item-link" target="_blank">Handbag 7</a>
+            <a href="https://amzn.to/4kzu976" class="item-link" target="_blank">Handbag 8</a>
+            <a href="https://amzn.to/4tzSduZ" class="item-link" target="_blank">Handbag 9</a>
+            <a href="https://amzn.to/4kJxvVu" class="item-link" target="_blank">Handbag 10</a>
+        </div>
+    </div>
+
+    <div id="earrings" class="category-section">
+        <h2 class="section-title">💎 Elegant Earrings</h2>
+        <div class="link-grid">
+            <a href="https://amzn.to/4qFr7j8" class="item-link" target="_blank">Earring 1</a>
+            <a href="https://amzn.to/4kExKRl" class="item-link" target="_blank">Earring 2</a>
+            <a href="https://amzn.to/3OKq4B9" class="item-link" target="_blank">Earring 3</a>
+            <a href="https://amzn.to/4qECrfC" class="item-link" target="_blank">Earring 4</a>
+            <a href="https://amzn.to/4bSXQhl" class="item-link" target="_blank">Earring 5</a>
+            <a href="https://amzn.to/3OJIj9P" class="item-link" target="_blank">Earring 6</a>
+            <a href="https://amzn.to/4rRFRwr" class="item-link" target="_blank">Earring 7</a>
+            <a href="https://amzn.to/4rTeKRE" class="item-link" target="_blank">Earring 8</a>
+            <a href="https://amzn.to/4qDvBqs" class="item-link" target="_blank">Earring 9</a>
+        </div>
+    </div>
+
+    <div id="beauty" class="category-section">
+        <h2 class="section-title">💄 Beauty Finds</h2>
+        <div class="link-grid">
+            <a href="https://amzn.to/4tzRgTr" class="item-link" target="_blank">Beauty Find 1</a>
+            <a href="https://amzn.to/4kXxFIZ" class="item-link" target="_blank">Beauty Find 2</a>
+            <a href="https://amzn.to/4tBm2uY" class="item-link" target="_blank">Beauty Find 3</a>
+            <a href="https://amzn.to/3Msgp1C" class="item-link" target="_blank">Beauty Find 4</a>
+            <a href="https://amzn.to/4tymWZ7" class="item-link" target="_blank">Beauty Find 5</a>
+            <a href="https://amzn.to/4tCXv8V" class="item-link" target="_blank">Beauty Find 6</a>
+            <a href="https://amzn.to/4tDgQa3" class="item-link" target="_blank">Beauty Find 7</a>
+            <a href="https://amzn.to/3Msgwdy" class="item-link" target="_blank">Beauty Find 8</a>
+            <a href="https://amzn.to/4kABVh0" class="item-link" target="_blank">Beauty Find 9</a>
+            <a href="https://amzn.to/4cwaO4O" class="item-link" target="_blank">Beauty Find 10</a>
+            <a href="https://amzn.to/4c3iUlr" class="item-link" target="_blank">Beauty Find 11</a>
+            <a href="https://amzn.to/4ajr0oF" class="item-link" target="_blank">Beauty Find 12</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Disclaimer: As an Amazon Associate, I earn from qualifying purchases.</p>
+        <p>&copy; 2026 Global Elegance. All Rights Reserved.</p>
     </div>
 
 </body>
