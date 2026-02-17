@@ -242,20 +242,33 @@
 </div>
     
     <div class="footer">
-        <p>Disclaimer: As an Amazon Associate, I earn from qualifying purchases.</p>
-        <p>&copy; 2026 Global Elegance. All Rights Reserved.</p>
-    </div>
+    <p>Disclaimer: As an Amazon Associate, I earn from qualifying purchases.</p>
+    <p>&copy; 2026 Global Elegance. All Rights Reserved.</p>
+</div>
 
-    <script>
-        window.addEventListener("scroll", function() {
-            var navBar = document.querySelector(".nav-bar");
-            if (window.scrollY > 50) {
-                navBar.classList.add("shrink");
-            } else {
-                navBar.classList.remove("shrink");
+<script>
+    window.addEventListener("scroll", function() {
+        var navBar = document.querySelector(".nav-bar");
+        if (window.scrollY > 50) {
+            navBar.classList.add("shrink");
+        } else {
+            navBar.classList.remove("shrink");
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let images = document.querySelectorAll(".product-img");
+        images.forEach(function(img) {
+            let src = img.getAttribute("src");
+            // Agar image Amazon ki hai, toh use Proxy ke through load karo
+            if (src && src.includes("amazon.com")) {
+                img.src = "https://wsrv.nl/?url=" + src;
             }
         });
-    </script>
+    });
+</script>
 
 </body>
 </html>
