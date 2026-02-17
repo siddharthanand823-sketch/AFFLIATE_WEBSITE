@@ -11,10 +11,14 @@
         .header h1 { font-family: 'Playfair Display', serif; font-size: 3.5em; color: #4A403A; margin: 0; letter-spacing: 1px; }
         .header p { font-size: 1.2em; color: #7A6C62; margin-top: 15px; }
         
-        /* Navigation Bar */
-        .nav-bar { background-color: #ffffff; padding: 15px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        /* Navigation Bar (Updated with Smooth Transitions) */
+        .nav-bar { background-color: #ffffff; padding: 15px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; transition: padding 0.4s ease, gap 0.4s ease, box-shadow 0.4s ease; }
         .nav-bar a { text-decoration: none; color: #4A403A; font-weight: 600; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; padding: 8px 15px; border-radius: 20px; transition: all 0.3s ease; }
         .nav-bar a:hover { background-color: #C08261; color: #ffffff; }
+
+        /* Shrink Class for Scroll Effect */
+        .nav-bar.shrink { padding: 8px 0; gap: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+        .nav-bar.shrink a { font-size: 0.8em; padding: 5px 12px; }
 
         /* Category Sections */
         .category-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
@@ -52,467 +56,202 @@
         <a href="#mens-watches">Men's Watches</a>
     </div>
 
-  <div id="sarees" class="category-section">
-    <h2 class="section-title">👗 Elegant Sarees</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61KjRsAQayL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Elegant Saree Collection</h3>
-            <a href="https://amzn.to/4ayYJcF" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71JwTuyiP-L._AC_SY550_.jpg" class="product-img">
-            <h3 class="product-title">Designer Wear Saree</h3>
-            <a href="https://amzn.to/4ahO2w8" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61vWOA6NIfL._AC_SY606_.jpg" class="product-img">
-            <h3 class="product-title">Traditional Silk Saree</h3>
-            <a href="https://amzn.to/3MLiQMI" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61Ek042QskL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Party Wear Saree</h3>
-            <a href="https://amzn.to/4qDuQO8" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61PC1ERFGjL._AC_SY550_.jpg" class="product-img">
-            <h3 class="product-title">Classic Cotton Saree</h3>
-            <a href="https://amzn.to/4rVnlmR" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-    </div>
-</div>
-    
- <div id="salwar-suits" class="category-section">
-    <h2 class="section-title">🌸 Salwar Suits</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61MrgMF9SVL._AC_SY550_.jpg" class="product-img">
-            <h3 class="product-title">Designer Salwar Suit</h3>
-            <a href="https://amzn.to/4rV7xk5" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/610kXeKriWL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Party Wear Suit</h3>
-            <a href="https://amzn.to/3ZAbezD" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/51BfS9mjlWL._AC_SX425_.jpg" class="product-img">
-            <h3 class="product-title">Casual Printed Suit</h3>
-            <a href="https://amzn.to/3ZGWHSJ" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/41brrO6HEfL._AC_SY500_.jpg" class="product-img">
-            <h3 class="product-title">Festive Salwar Suit</h3>
-            <a href="https://amzn.to/46ajgTz" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/719LjlQYvHL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Elegant Cotton Suit</h3>
-            <a href="https://amzn.to/4rk5DcN" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-    </div>
-</div>
-    
-<div id="handbags" class="category-section">
-    <h2 class="section-title">👜 Luxury Handbags</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71UNklSwHgL._AC_SY395_.jpg" class="product-img">
-            <h3 class="product-title">Classic Leather Tote</h3>
-            <a href="https://amzn.to/3Oh2D2k" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/81AwUMf1S3L._AC_SY395_.jpg" class="product-img">
-            <h3 class="product-title">Designer Crossbody</h3>
-            <a href="https://amzn.to/4rQwop3" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61DLn01wbZL._AC_SY535_.jpg" class="product-img">
-            <h3 class="product-title">Elegant Clutch</h3>
-            <a href="https://amzn.to/3Ojbalp" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/81Cuc1+EuBL._AC_SY395_.jpg" class="product-img">
-            <h3 class="product-title">Everyday Shoulder Bag</h3>
-            <a href="https://amzn.to/4tDfhc3" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/81MW8t3ADLL._AC_SY395_.jpg" class="product-img">
-            <h3 class="product-title">Luxury Handbag</h3>
-            <a href="https://amzn.to/3OhslDU" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/513DQlqoR0L._AC_SY395_.jpg" class="product-img">
-            <h3 class="product-title">Premium Purse</h3>
-            <a href="https://amzn.to/4tFdH9I" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61GRHebrv5L._AC_SX385_.jpg" class="product-img">
-            <h3 class="product-title">Fashion Satchel</h3>
-            <a href="https://amzn.to/4tzE5Sp" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/614zrw9TkBL._AC_SY395_.jpg" class="product-img">
-            <h3 class="product-title">Trendy Mini Bag</h3>
-            <a href="https://amzn.to/4kzu976" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/51-DMfNThTL._AC_SX385_.jpg" class="product-img">
-            <h3 class="product-title">Casual Canvas Tote</h3>
-            <a href="https://amzn.to/4tzSduZ" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61Vky7ZalPL._AC_SX342_.jpg" class="product-img">
-            <h3 class="product-title">Office Work Bag</h3>
-            <a href="https://amzn.to/4kJxvVu" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-    </div>
-</div>
-    
-<div id="womens-watches" class="category-section">
-    <h2 class="section-title">⌚ Women's Watches</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61pD7G7H6BL._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Rose Gold Dial Luxury Watch</h3>
-            <a href="https://amzn.to/46aifLf" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71pW-rX2yXL._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Classic Leather Strap Watch</h3>
-            <a href="https://amzn.to/3Ow0FLv" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/719f-HTo08L._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Luxury Diamond Studded Watch</h3>
-            <a href="https://amzn.to/3MtdaXG" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61C-lYfJpFL._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Minimalist Silver Mesh Watch</h3>
-            <a href="https://amzn.to/3OkzmUm" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61XmF6v9P2L._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Designer Smartwatch for Women</h3>
-            <a href="https://amzn.to/4alORUN" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71I9U-878-L._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Elegant Gold Bracelet Watch</h3>
-            <a href="https://amzn.to/3MrKkXI" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71+2I5yK7sL._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Premium Analog Steel Watch</h3>
-            <a href="https://amzn.to/4kABjrI" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71N15f5p+5L._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Casual Daily Wear Blue Watch</h3>
-            <a href="https://amzn.to/4kBh90Q" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61F9uK07FpL._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Fashion Chronograph Watch</h3>
-            <a href="https://amzn.to/4tzR5HL" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71-oYm-e8dL._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Vintage Collection Gold Watch</h3>
-            <a href="https://amzn.to/4cgvIFd" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-    </div>
-</div>
-    
-   <div id="earrings" class="category-section">
-        <h2 class="section-title">💎 Elegant Earrings</h2>
+    <div id="sarees" class="category-section">
+        <h2 class="section-title">👗 Elegant Sarees</h2>
         <div class="product-grid">
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/912UexB1jQL._AC_SX385_.jpg" class="product-img"><h3 class="product-title">Crystal Stud Earrings</h3><a href="https://amzn.to/4qFr7j8" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81ogPu4cPXL._AC_SY395_.jpg" class="product-img"><h3 class="product-title">Gold Plated Hoops</h3><a href="https://amzn.to/4kExKRl" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81w6l8DsehL._AC_SX385_.jpg" class="product-img"><h3 class="product-title">Diamond Drop Earrings</h3><a href="https://amzn.to/3OKq4B9" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/811IvlA0T5L._AC_SX679_.jpg" class="product-img"><h3 class="product-title">Pearl Elegance</h3><a href="https://amzn.to/4qECrfC" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61pPJ62gURL._AC_SX522_.jpg" class="product-img"><h3 class="product-title">Silver Statement</h3><a href="https://amzn.to/4bSXQhl" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/613S-Ylw-xL._AC_SX522_.jpg" class="product-img"><h3 class="product-title">Vintage Chandelier</h3><a href="https://amzn.to/3OJIj9P" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71+NuktqAVL._AC_SX385_.jpg" class="product-img"><h3 class="product-title">Minimalist Studs</h3><a href="https://amzn.to/4rRFRwr" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81rDrY0NhIL._AC_SX522_.jpg" class="product-img"><h3 class="product-title">Party Wear Jewels</h3><a href="https://amzn.to/4rTeKRE" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71kH-OXqc+L._AC_SY450_.jpg" class="product-img"><h3 class="product-title">Bridal Collection</h3><a href="https://amzn.to/4qDvBqs" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71EZP-IlNUL._AC_SX342_.jpg" class="product-img"><h3 class="product-title">Luxury Statement Earrings</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61KjRsAQayL._AC_SY445_.jpg" alt="Elegant Saree" loading="lazy" class="product-img"><h3 class="product-title">Elegant Saree Collection</h3><a href="https://amzn.to/4ayYJcF" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71JwTuyiP-L._AC_SY550_.jpg" alt="Designer Saree" loading="lazy" class="product-img"><h3 class="product-title">Designer Wear Saree</h3><a href="https://amzn.to/4ahO2w8" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61vWOA6NIfL._AC_SY606_.jpg" alt="Silk Saree" loading="lazy" class="product-img"><h3 class="product-title">Traditional Silk Saree</h3><a href="https://amzn.to/3MLiQMI" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61Ek042QskL._AC_SY445_.jpg" alt="Party Saree" loading="lazy" class="product-img"><h3 class="product-title">Party Wear Saree</h3><a href="https://amzn.to/4qDuQO8" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61PC1ERFGjL._AC_SY550_.jpg" alt="Cotton Saree" loading="lazy" class="product-img"><h3 class="product-title">Classic Cotton Saree</h3><a href="https://amzn.to/4rVnlmR" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61vhkSRDrdL._AC_SY550_.jpg" alt="Festive Saree" loading="lazy" class="product-img"><h3 class="product-title">Festive Collection Saree</h3><a href="https://amzn.to/4rSRy64" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71Seph-U+qL._AC_SY445_.jpg" alt="Premium Saree" loading="lazy" class="product-img"><h3 class="product-title">Premium Saree</h3><a href="https://amzn.to/4qCGAQU" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81nAHKNAgWL._AC_SY445_.jpg" alt="Wedding Saree" loading="lazy" class="product-img"><h3 class="product-title">Wedding Collection Saree</h3><a href="https://amzn.to/3OJHBcF" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/6181DtN4TfL._AC_SY445_.jpg" alt="Luxury Saree" loading="lazy" class="product-img"><h3 class="product-title">Luxury Saree</h3><a href="https://amzn.to/4reqMFe" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/516b0ilIIzL._AC_SX342_.jpg" alt="Exclusive Saree" loading="lazy" class="product-img"><h3 class="product-title">Exclusive Saree</h3><a href="https://amzn.to/3OrHEtC" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
-  <div id="beauty" class="category-section">
+    <div id="salwar-suits" class="category-section">
+        <h2 class="section-title">🌸 Salwar Suits</h2>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61MrgMF9SVL._AC_SY550_.jpg" alt="Designer Salwar Suit" loading="lazy" class="product-img"><h3 class="product-title">Designer Salwar Suit</h3><a href="https://amzn.to/4rV7xk5" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/610kXeKriWL._AC_SY445_.jpg" alt="Party Wear Suit" loading="lazy" class="product-img"><h3 class="product-title">Party Wear Suit</h3><a href="https://amzn.to/3ZAbezD" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/51BfS9mjlWL._AC_SX425_.jpg" alt="Casual Printed Suit" loading="lazy" class="product-img"><h3 class="product-title">Casual Printed Suit</h3><a href="https://amzn.to/3ZGWHSJ" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/41brrO6HEfL._AC_SY500_.jpg" alt="Festive Salwar Suit" loading="lazy" class="product-img"><h3 class="product-title">Festive Salwar Suit</h3><a href="https://amzn.to/46ajgTz" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/719LjlQYvHL._AC_SY445_.jpg" alt="Elegant Cotton Suit" loading="lazy" class="product-img"><h3 class="product-title">Elegant Cotton Suit</h3><a href="https://amzn.to/4rk5DcN" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Add+Suit+Image+6" alt="Traditional Kurti Set" loading="lazy" class="product-img"><h3 class="product-title">Traditional Kurti Set</h3><a href="https://amzn.to/4rlHO4w" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Add+Suit+Image+7" alt="Luxury Ethnic Wear" loading="lazy" class="product-img"><h3 class="product-title">Luxury Ethnic Wear</h3><a href="https://amzn.to/46927tp" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Add+Suit+Image+8" alt="Classic Salwar Kameez" loading="lazy" class="product-img"><h3 class="product-title">Classic Salwar Kameez</h3><a href="https://amzn.to/46c7fgi" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Add+Suit+Image+9" alt="Premium Suit Set" loading="lazy" class="product-img"><h3 class="product-title">Premium Suit Set</h3><a href="https://amzn.to/4akSFWd" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250?text=Add+Suit+Image+10" alt="Beautiful Festive Wear" loading="lazy" class="product-img"><h3 class="product-title">Beautiful Festive Wear</h3><a href="https://amzn.to/3Mylh5h" class="amz-btn" target="_blank">View on Amazon</a></div>
+        </div>
+    </div>
+
+    <div id="handbags" class="category-section">
+        <h2 class="section-title">👜 Luxury Handbags</h2>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71UNklSwHgL._AC_SY395_.jpg" alt="Classic Leather Tote" loading="lazy" class="product-img"><h3 class="product-title">Classic Leather Tote</h3><a href="https://amzn.to/3Oh2D2k" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81AwUMf1S3L._AC_SY395_.jpg" alt="Designer Crossbody" loading="lazy" class="product-img"><h3 class="product-title">Designer Crossbody</h3><a href="https://amzn.to/4rQwop3" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61DLn01wbZL._AC_SY535_.jpg" alt="Elegant Clutch" loading="lazy" class="product-img"><h3 class="product-title">Elegant Clutch</h3><a href="https://amzn.to/3Ojbalp" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81Cuc1+EuBL._AC_SY395_.jpg" alt="Everyday Shoulder Bag" loading="lazy" class="product-img"><h3 class="product-title">Everyday Shoulder Bag</h3><a href="https://amzn.to/4tDfhc3" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81MW8t3ADLL._AC_SY395_.jpg" alt="Luxury Handbag" loading="lazy" class="product-img"><h3 class="product-title">Luxury Handbag</h3><a href="https://amzn.to/3OhslDU" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/513DQlqoR0L._AC_SY395_.jpg" alt="Premium Purse" loading="lazy" class="product-img"><h3 class="product-title">Premium Purse</h3><a href="https://amzn.to/4tFdH9I" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61GRHebrv5L._AC_SX385_.jpg" alt="Fashion Satchel" loading="lazy" class="product-img"><h3 class="product-title">Fashion Satchel</h3><a href="https://amzn.to/4tzE5Sp" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/614zrw9TkBL._AC_SY395_.jpg" alt="Trendy Mini Bag" loading="lazy" class="product-img"><h3 class="product-title">Trendy Mini Bag</h3><a href="https://amzn.to/4kzu976" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/51-DMfNThTL._AC_SX385_.jpg" alt="Casual Canvas Tote" loading="lazy" class="product-img"><h3 class="product-title">Casual Canvas Tote</h3><a href="https://amzn.to/4tzSduZ" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61Vky7ZalPL._AC_SX342_.jpg" alt="Office Work Bag" loading="lazy" class="product-img"><h3 class="product-title">Office Work Bag</h3><a href="https://amzn.to/4kJxvVu" class="amz-btn" target="_blank">View on Amazon</a></div>
+        </div>
+    </div>
+
+    <div id="womens-watches" class="category-section">
+        <h2 class="section-title">⌚ Women's Watches</h2>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61pD7G7H6BL._AC_SY679_.jpg" alt="Rose Gold Dial Watch" loading="lazy" class="product-img"><h3 class="product-title">Rose Gold Dial Luxury Watch</h3><a href="https://amzn.to/46aifLf" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71pW-rX2yXL._AC_SY679_.jpg" alt="Classic Leather Strap Watch" loading="lazy" class="product-img"><h3 class="product-title">Classic Leather Strap Watch</h3><a href="https://amzn.to/3Ow0FLv" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/719f-HTo08L._AC_SY679_.jpg" alt="Diamond Studded Watch" loading="lazy" class="product-img"><h3 class="product-title">Luxury Diamond Studded Watch</h3><a href="https://amzn.to/3MtdaXG" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61C-lYfJpFL._AC_SY679_.jpg" alt="Silver Mesh Watch" loading="lazy" class="product-img"><h3 class="product-title">Minimalist Silver Mesh Watch</h3><a href="https://amzn.to/3OkzmUm" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61XmF6v9P2L._AC_SY679_.jpg" alt="Smartwatch for Women" loading="lazy" class="product-img"><h3 class="product-title">Designer Smartwatch for Women</h3><a href="https://amzn.to/4alORUN" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71I9U-878-L._AC_SY679_.jpg" alt="Gold Bracelet Watch" loading="lazy" class="product-img"><h3 class="product-title">Elegant Gold Bracelet Watch</h3><a href="https://amzn.to/3MrKkXI" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71+2I5yK7sL._AC_SY679_.jpg" alt="Analog Steel Watch" loading="lazy" class="product-img"><h3 class="product-title">Premium Analog Steel Watch</h3><a href="https://amzn.to/4kABjrI" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71N15f5p+5L._AC_SY679_.jpg" alt="Daily Wear Watch" loading="lazy" class="product-img"><h3 class="product-title">Casual Daily Wear Blue Watch</h3><a href="https://amzn.to/4kBh90Q" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61F9uK07FpL._AC_SY679_.jpg" alt="Chronograph Watch" loading="lazy" class="product-img"><h3 class="product-title">Fashion Chronograph Watch</h3><a href="https://amzn.to/4tzR5HL" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71-oYm-e8dL._AC_SY679_.jpg" alt="Vintage Gold Watch" loading="lazy" class="product-img"><h3 class="product-title">Vintage Collection Gold Watch</h3><a href="https://amzn.to/4cgvIFd" class="amz-btn" target="_blank">View on Amazon</a></div>
+        </div>
+    </div>
+
+    <div id="earrings" class="category-section">
+        <h2 class="section-title">💎 Elegant Earrings</h2>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/912UexB1jQL._AC_SX385_.jpg" alt="Crystal Stud Earrings" loading="lazy" class="product-img"><h3 class="product-title">Crystal Stud Earrings</h3><a href="https://amzn.to/4qFr7j8" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81ogPu4cPXL._AC_SY395_.jpg" alt="Gold Plated Hoops" loading="lazy" class="product-img"><h3 class="product-title">Gold Plated Hoops</h3><a href="https://amzn.to/4kExKRl" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81w6l8DsehL._AC_SX385_.jpg" alt="Diamond Drop Earrings" loading="lazy" class="product-img"><h3 class="product-title">Diamond Drop Earrings</h3><a href="https://amzn.to/3OKq4B9" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/811IvlA0T5L._AC_SX679_.jpg" alt="Pearl Elegance" loading="lazy" class="product-img"><h3 class="product-title">Pearl Elegance</h3><a href="https://amzn.to/4qECrfC" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61pPJ62gURL._AC_SX522_.jpg" alt="Silver Statement" loading="lazy" class="product-img"><h3 class="product-title">Silver Statement</h3><a href="https://amzn.to/4bSXQhl" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/613S-Ylw-xL._AC_SX522_.jpg" alt="Vintage Chandelier" loading="lazy" class="product-img"><h3 class="product-title">Vintage Chandelier</h3><a href="https://amzn.to/3OJIj9P" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71+NuktqAVL._AC_SX385_.jpg" alt="Minimalist Studs" loading="lazy" class="product-img"><h3 class="product-title">Minimalist Studs</h3><a href="https://amzn.to/4rRFRwr" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81rDrY0NhIL._AC_SX522_.jpg" alt="Party Wear Jewels" loading="lazy" class="product-img"><h3 class="product-title">Party Wear Jewels</h3><a href="https://amzn.to/4rTeKRE" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71kH-OXqc+L._AC_SY450_.jpg" alt="Bridal Collection" loading="lazy" class="product-img"><h3 class="product-title">Bridal Collection</h3><a href="https://amzn.to/4qDvBqs" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71EZP-IlNUL._AC_SX342_.jpg" alt="Luxury Statement Earrings" loading="lazy" class="product-img"><h3 class="product-title">Luxury Statement Earrings</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+        </div>
+    </div>
+
+    <div id="beauty" class="category-section">
         <h2 class="section-title">💄 Beauty Finds</h2>
         <div class="product-grid">
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71jhmIgrbXL._AC_SX300_SY300_QL70_ML2_.jpg" class="product-img"><h3 class="product-title">Premium Skincare</h3><a href="https://amzn.to/4tzRgTr" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81Dr52TLVLL._AC_SY300_SX300_QL70_ML2_.jpg" class="product-img"><h3 class="product-title">Luxury Makeup Set</h3><a href="https://amzn.to/4kXxFIZ" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61IXpOfchGL._AC_SY300_SX300_QL70_ML2_.jpg" class="product-img"><h3 class="product-title">Daily Essential Cream</h3><a href="https://amzn.to/4tBm2uY" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/616YIg55gvL._AC_SY300_SX300_QL70_ML2_.jpg" class="product-img"><h3 class="product-title">Hair Care Routine</h3><a href="https://amzn.to/3Msgp1C" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71Tr5m3VeoL._AC_SY300_SX300_QL70_ML2_.jpg" class="product-img"><h3 class="product-title">Glowing Serum</h3><a href="https://amzn.to/4tymWZ7" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/718BnjZe76L._AC_SY300_SX300_QL70_ML2_.jpg" class="product-img"><h3 class="product-title">Radiant Foundation</h3><a href="https://amzn.to/4tCXv8V" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71DgBcSP-2L._AC_SY300_SX300_QL70_ML2_.jpg" class="product-img"><h3 class="product-title">Long Lasting Lipstick</h3><a href="https://amzn.to/4tDgQa3" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71U6wNF44hL._AC_SY300_SX300_QL70_ML2_.jpg" class="product-img"><h3 class="product-title">Professional Palette</h3><a href="https://amzn.to/3Msgwdy" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71RI+8Kfz0L._AC_SY300_SX300_QL70_ML2_.jpg" class="product-img"><h3 class="product-title">Hydrating Moisturizer</h3><a href="https://amzn.to/4kABVh0" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71-ekZvH8qL._AC_SY355_.jpg" class="product-img"><h3 class="product-title">Cleansing Routine</h3><a href="https://amzn.to/4cwaO4O" class="amz-btn" target="_blank">View on Amazon</a></div>
-            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81RXbT5+nHL._AC_SY300_SX300_QL70_ML2_.jpg" class="product-img"><h3 class="product-title">Beauty Gift Set</h3><a href="https://amzn.to/4c3iUlr" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71jhmIgrbXL._AC_SX300_SY300_QL70_ML2_.jpg" alt="Premium Skincare" loading="lazy" class="product-img"><h3 class="product-title">Premium Skincare</h3><a href="https://amzn.to/4tzRgTr" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81Dr52TLVLL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Luxury Makeup Set" loading="lazy" class="product-img"><h3 class="product-title">Luxury Makeup Set</h3><a href="https://amzn.to/4kXxFIZ" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61IXpOfchGL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Daily Essential Cream" loading="lazy" class="product-img"><h3 class="product-title">Daily Essential Cream</h3><a href="https://amzn.to/4tBm2uY" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/616YIg55gvL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Hair Care Routine" loading="lazy" class="product-img"><h3 class="product-title">Hair Care Routine</h3><a href="https://amzn.to/3Msgp1C" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71Tr5m3VeoL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Glowing Serum" loading="lazy" class="product-img"><h3 class="product-title">Glowing Serum</h3><a href="https://amzn.to/4tymWZ7" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/718BnjZe76L._AC_SY300_SX300_QL70_ML2_.jpg" alt="Radiant Foundation" loading="lazy" class="product-img"><h3 class="product-title">Radiant Foundation</h3><a href="https://amzn.to/4tCXv8V" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71DgBcSP-2L._AC_SY300_SX300_QL70_ML2_.jpg" alt="Long Lasting Lipstick" loading="lazy" class="product-img"><h3 class="product-title">Long Lasting Lipstick</h3><a href="https://amzn.to/4tDgQa3" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71U6wNF44hL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Professional Palette" loading="lazy" class="product-img"><h3 class="product-title">Professional Palette</h3><a href="https://amzn.to/3Msgwdy" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71RI+8Kfz0L._AC_SY300_SX300_QL70_ML2_.jpg" alt="Hydrating Moisturizer" loading="lazy" class="product-img"><h3 class="product-title">Hydrating Moisturizer</h3><a href="https://amzn.to/4kABVh0" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71-ekZvH8qL._AC_SY355_.jpg" alt="Cleansing Routine" loading="lazy" class="product-img"><h3 class="product-title">Cleansing Routine</h3><a href="https://amzn.to/4cwaO4O" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
     <div id="womens-shoes" class="category-section">
         <h2 class="section-title">👠 Women's Shoes</h2>
         <div class="product-grid">
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/712FRJB6uNL._AC_SY500_.jpg" class="product-img">
-                <h3 class="product-title">Comfort Running Shoes</h3>
-                <a href="https://amzn.to/4qHsrlQ" class="amz-btn" target="_blank">View on Amazon</a>
-            </div>
-            
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/71XqikmqTWL._AC_SY500_.jpg" class="product-img">
-                <h3 class="product-title">Classic White Sneakers</h3>
-                <a href="https://a.co/d/hX8D90z" class="amz-btn" target="_blank">View on Amazon</a>
-            </div>
-
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/71gtx5-KWgL._AC_SY500_.jpg" class="product-img">
-                <h3 class="product-title">Elegant High Heels</h3>
-                <a href="https://amzn.to/4rWNfqw" class="amz-btn" target="_blank">View on Amazon</a>
-            </div>
-
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/81QaNcN0htL._AC_SY500_.jpg" class="product-img">
-                <h3 class="product-title">Casual Flats</h3>
-                <a href="https://amzn.to/3OkvNgW" class="amz-btn" target="_blank">View on Amazon</a>
-            </div>
-
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/71mmGbiwGdL._AC_SY395_.jpg" class="product-img">
-                <h3 class="product-title">Premium Boots</h3>
-                <a href="https://amzn.to/4aEzR37" class="amz-btn" target="_blank">View on Amazon</a>
-            </div>
-
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/814vObsp4hL._AC_SY500_.jpg" class="product-img">
-                <h3 class="product-title">Party Wear Heels</h3>
-                <a href="https://amzn.to/3ZGStKR" class="amz-btn" target="_blank">View on Amazon</a>
-            </div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/712FRJB6uNL._AC_SY500_.jpg" alt="Athletic Running Shoes" loading="lazy" class="product-img"><h3 class="product-title">Comfortable Athletic Running Shoes</h3><a href="https://amzn.to/4qHsrlQ" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71XqikmqTWL._AC_SY500_.jpg" alt="White Sneakers" loading="lazy" class="product-img"><h3 class="product-title">Classic White Street-Style Sneakers</h3><a href="https://amzn.to/46GKeCi" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71gtx5-KWgL._AC_SY500_.jpg" alt="Strappy High Heels" loading="lazy" class="product-img"><h3 class="product-title">Elegant Strappy High Heels</h3><a href="https://amzn.to/4twjYV0" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81QaNcN0htL._AC_SY500_.jpg" alt="Daily Wear Flats" loading="lazy" class="product-img"><h3 class="product-title">Elegant Daily Wear Casual Flats</h3><a href="https://amzn.to/4aAmeSB" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61xRBUmbLCL._AC_SY395_.jpg" alt="Tan Block Heel Sandals" loading="lazy" class="product-img"><h3 class="product-title">Stylish Tan Block Heel Sandals</h3><a href="https://amzn.to/4rg07I8" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71mmGbiwGdL._AC_SY395_.jpg" alt="Autumn Boots" loading="lazy" class="product-img"><h3 class="product-title">Premium Black Autumn Boots</h3><a href="https://amzn.to/3MuIKnW" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/51+ckGqzNzL._AC_SY395_.jpg" alt="White Strappy Sandals" loading="lazy" class="product-img"><h3 class="product-title">Elegant White Strappy Sandals</h3><a href="https://amzn.to/4kFhjnO" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71FTsy4VKkL._AC_SY395_.jpg" alt="Beige Block Heels" loading="lazy" class="product-img"><h3 class="product-title">Classic Beige Block Heels</h3><a href="https://amzn.to/3OvmwTf" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61RdQGmu-OL._AC_SY395_.jpg" alt="Red Pointed Heels" loading="lazy" class="product-img"><h3 class="product-title">Stunning Red Pointed Toe Heels</h3><a href="https://amzn.to/4rMYVfk" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81v5oPsQ0cL._AC_SY395_.jpg" alt="Comfort Wedge Sandals" loading="lazy" class="product-img"><h3 class="product-title">Elegant Comfort Wedge Sandals</h3><a href="https://amzn.to/3ZGt3Nm" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/814vObsp4hL._AC_SY500_.jpg" alt="Silver Heels" loading="lazy" class="product-img"><h3 class="product-title">Sparkling Party Wear Silver Heels</h3><a href="https://amzn.to/4cuHADl" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
 
-   
-   <div id="mens-casuals" class="category-section">
-    <h2 class="section-title">👕 Men's Casual Wear</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/51NkNMkCe2L._AC_SX342_.jpg" class="product-img">
-            <h3 class="product-title">Textured White Relaxed Fit Shirt</h3>
-            <a href="https://amzn.to/465RGa0" class="amz-btn" target="_blank">View on Amazon</a>
+    <div id="mens-casuals" class="category-section">
+        <h2 class="section-title">👕 Men's Casual Wear</h2>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/51NkNMkCe2L._AC_SX342_.jpg" alt="White Relaxed Fit Shirt" loading="lazy" class="product-img"><h3 class="product-title">Textured White Relaxed Fit Shirt</h3><a href="https://amzn.to/465RGa0" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71ZSr026gfL._AC_SY445_.jpg" alt="Blue Striped Shirt" loading="lazy" class="product-img"><h3 class="product-title">Sky Blue Striped Summer Shirt</h3><a href="https://amzn.to/4rUN130" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71n4aYYXM-L._AC_SY550_.jpg" alt="Navy Blue Shirt" loading="lazy" class="product-img"><h3 class="product-title">Deep Navy Blue Classic Shirt</h3><a href="https://amzn.to/4cuCS8D" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71QQtvG5MaL._AC_SY550_.jpg" alt="Striped Shirt" loading="lazy" class="product-img"><h3 class="product-title">Grey & White Modern Striped Shirt</h3><a href="https://amzn.to/4qG8HPu" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71hTMfi7COL._AC_SY445_.jpg" alt="Olive Green Shirt" loading="lazy" class="product-img"><h3 class="product-title">Olive Green Textured Casual Shirt</h3><a href="https://amzn.to/46GFFYG" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61RI2Xae-EL._AC_SX342_.jpg" alt="Geometric Print Shirt" loading="lazy" class="product-img"><h3 class="product-title">Monochrome Geometric Print Shirt</h3><a href="https://amzn.to/4rPaCSE" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61jdYTrUOpL._AC_SX522_.jpg" alt="Pink Tropical Shirt" loading="lazy" class="product-img"><h3 class="product-title">Vibrant Pink Tropical Print Shirt</h3><a href="https://amzn.to/3MOQUHP" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61Cok7GuJCL._AC_SX522_.jpg" alt="Mint Green Shirt" loading="lazy" class="product-img"><h3 class="product-title">Mint Green Relaxed Fit Shirt</h3><a href="https://amzn.to/3ZIprKR" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71phPQatxeL._AC_SX385_.jpg" alt="White Pattern Shirt" loading="lazy" class="product-img"><h3 class="product-title">White Abstract Pattern Summer Shirt</h3><a href="https://amzn.to/4aSP55U" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81Y7Lhd3QHL._AC_SY445_.jpg" alt="Blue Printed Shirt" loading="lazy" class="product-img"><h3 class="product-title">Deep Blue Printed Regular Fit Shirt</h3><a href="https://amzn.to/4arngQA" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71uHgo1UiBL._AC_SX385_.jpg" alt="Black Modern Shirt" loading="lazy" class="product-img"><h3 class="product-title">Black Geometric Modern Shirt</h3><a href="https://amzn.to/46bO6Lu" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71rlCOn21YL._AC_SX342_.jpg" alt="Vertical Striped Shirt" loading="lazy" class="product-img"><h3 class="product-title">Vertical Striped Premium Shirt</h3><a href="https://amzn.to/40k0ky1" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71+5xPl1IrL._AC_SX342_.jpg" alt="Navy Abstract Shirt" loading="lazy" class="product-img"><h3 class="product-title">Navy Blue Abstract Print Shirt</h3><a href="https://amzn.to/4aRtXwO" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/516cLNp2fCL._AC_SY445_.jpg" alt="Tropical Party Shirt" loading="lazy" class="product-img"><h3 class="product-title">Tropical Black & White Party Shirt</h3><a href="https://amzn.to/4qZsU2Z" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61jYDfls1lL._AC_SX342_.jpg" alt="Black Gold Shirt" loading="lazy" class="product-img"><h3 class="product-title">Royal Black & Gold Printed Shirt</h3><a href="https://amzn.to/4aCgKXt" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61pLmi2-QkL._AC_SY445_.jpg" alt="Vacation Shirt" loading="lazy" class="product-img"><h3 class="product-title">Tropical Black Vacation Shirt</h3><a href="https://amzn.to/4bZ6drD" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/611TjOYdpQL._AC_SY445_.jpg" alt="Micro-Print Shirt" loading="lazy" class="product-img"><h3 class="product-title">Premium Navy Micro-Print Shirt</h3><a href="https://amzn.to/46wPgS3" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71waVRnC+xL._AC_SX385_.jpg" alt="Red Abstract Shirt" loading="lazy" class="product-img"><h3 class="product-title">Red & White Abstract Modern Shirt</h3><a href="https://amzn.to/4rpxSXI" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/81CYR6ldRJL._AC_SY445_.jpg" alt="Dark Floral Shirt" loading="lazy" class="product-img"><h3 class="product-title">Dark Floral Premium Casual Shirt</h3><a href="https://amzn.to/4rpXQKH" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71aDRAzePxL._AC_SX385_.jpg" alt="Maroon Pattern Shirt" loading="lazy" class="product-img"><h3 class="product-title">Maroon & Black Patterned Shirt</h3><a href="https://amzn.to/40fZjHi" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61+hqQs6mDL._AC_SX385_.jpg" alt="Light Blue Shirt" loading="lazy" class="product-img"><h3 class="product-title">Light Blue Abstract Summer Shirt</h3><a href="https://amzn.to/46TDhhc" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61tGhjmnhqL._AC_SX385_.jpg" alt="Classic Black Shirt" loading="lazy" class="product-img"><h3 class="product-title">Classic Black Printed Regular Shirt</h3><a href="https://amzn.to/4aUCzmj" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71kiGiT9nzL._AC_SX385_.jpg" alt="Navy Geo Shirt" loading="lazy" class="product-img"><h3 class="product-title">Navy Blue Abstract Geo Print Shirt</h3><a href="https://amzn.to/4rkn0tT" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61TRgJ+Nt8L._AC_SY445_.jpg" alt="Navy Floral Shirt" loading="lazy" class="product-img"><h3 class="product-title">Deep Navy Blue Floral Premium Shirt</h3><a href="https://amzn.to/4tXGVkr" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61uVSHBSA9L._AC_SY445_.jpg" alt="Resort Shirt" loading="lazy" class="product-img"><h3 class="product-title">Black Printed Casual Resort Shirt</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Denim+Jeans" alt="Blue Denim Jeans" loading="lazy" class="product-img"><h3 class="product-title">Classic Blue Denim Jeans</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Casual+T-Shirt" alt="Round Neck T-Shirt" loading="lazy" class="product-img"><h3 class="product-title">Cotton Round Neck T-Shirt</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Cargo+Pants" alt="Cargo Pants" loading="lazy" class="product-img"><h3 class="product-title">Olive Green Cargo Pants</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Polo+T-Shirt" alt="Polo T-Shirt" loading="lazy" class="product-img"><h3 class="product-title">Premium Polo T-Shirt</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Bomber+Jacket" alt="Bomber Jacket" loading="lazy" class="product-img"><h3 class="product-title">Stylish Bomber Jacket</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71ZSr026gfL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Sky Blue Striped Summer Shirt</h3>
-            <a href="https://amzn.to/4rUN130" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71n4aYYXM-L._AC_SY550_.jpg" class="product-img">
-            <h3 class="product-title">Deep Navy Blue Classic Shirt</h3>
-            <a href="https://amzn.to/4cuCS8D" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71QQtvG5MaL._AC_SY550_.jpg" class="product-img">
-            <h3 class="product-title">Grey & White Modern Striped Shirt</h3>
-            <a href="https://amzn.to/4qG8HPu" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71hTMfi7COL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Olive Green Textured Casual Shirt</h3>
-            <a href="https://amzn.to/46GFFYG" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61RI2Xae-EL._AC_SX342_.jpg" class="product-img">
-            <h3 class="product-title">Monochrome Geometric Print Shirt</h3>
-            <a href="https://amzn.to/4rPaCSE" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61jdYTrUOpL._AC_SX522_.jpg" class="product-img">
-            <h3 class="product-title">Vibrant Pink Tropical Print Shirt</h3>
-            <a href="https://amzn.to/3MOQUHP" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61Cok7GuJCL._AC_SX522_.jpg" class="product-img">
-            <h3 class="product-title">Mint Green Relaxed Fit Shirt</h3>
-            <a href="https://amzn.to/3ZIprKR" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71phPQatxeL._AC_SX385_.jpg" class="product-img">
-            <h3 class="product-title">White Abstract Pattern Summer Shirt</h3>
-            <a href="https://amzn.to/4aSP55U" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/81Y7Lhd3QHL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Deep Blue Printed Regular Fit Shirt</h3>
-            <a href="https://amzn.to/4arngQA" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71uHgo1UiBL._AC_SX385_.jpg" class="product-img">
-            <h3 class="product-title">Black Geometric Modern Shirt</h3>
-            <a href="https://amzn.to/46bO6Lu" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71rlCOn21YL._AC_SX342_.jpg" class="product-img">
-            <h3 class="product-title">Vertical Striped Premium Shirt</h3>
-            <a href="https://amzn.to/40k0ky1" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71+5xPl1IrL._AC_SX342_.jpg" class="product-img">
-            <h3 class="product-title">Navy Blue Abstract Print Shirt</h3>
-            <a href="https://amzn.to/4aRtXwO" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/516cLNp2fCL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Tropical Black & White Party Shirt</h3>
-            <a href="https://amzn.to/4qZsU2Z" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61jYDfls1lL._AC_SX342_.jpg" class="product-img">
-            <h3 class="product-title">Royal Black & Gold Printed Shirt</h3>
-            <a href="https://amzn.to/4aCgKXt" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61pLmi2-QkL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Tropical Black Vacation Shirt</h3>
-            <a href="https://amzn.to/4bZ6drD" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/611TjOYdpQL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Premium Navy Micro-Print Shirt</h3>
-            <a href="https://amzn.to/46wPgS3" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71waVRnC+xL._AC_SX385_.jpg" class="product-img">
-            <h3 class="product-title">Red & White Abstract Modern Shirt</h3>
-            <a href="https://amzn.to/4rpxSXI" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/81CYR6ldRJL._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Dark Floral Premium Casual Shirt</h3>
-            <a href="https://amzn.to/4rpXQKH" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71aDRAzePxL._AC_SX385_.jpg" class="product-img">
-            <h3 class="product-title">Maroon & Black Patterned Shirt</h3>
-            <a href="https://amzn.to/40fZjHi" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61+hqQs6mDL._AC_SX385_.jpg" class="product-img">
-            <h3 class="product-title">Light Blue Abstract Summer Shirt</h3>
-            <a href="https://amzn.to/46TDhhc" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61tGhjmnhqL._AC_SX385_.jpg" class="product-img">
-            <h3 class="product-title">Classic Black Printed Regular Shirt</h3>
-            <a href="https://amzn.to/4aUCzmj" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71kiGiT9nzL._AC_SX385_.jpg" class="product-img">
-            <h3 class="product-title">Navy Blue Abstract Geo Print Shirt</h3>
-            <a href="https://amzn.to/4rkn0tT" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61TRgJ+Nt8L._AC_SY445_.jpg" class="product-img">
-            <h3 class="product-title">Deep Navy Blue Floral Premium Shirt</h3>
-            <a href="https://amzn.to/4tXGVkr" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        </div>
-</div>
+    </div>
 
     <div id="mens-shoes" class="category-section">
-    <h2 class="section-title">👟 Men's Shoes</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71D9ImsvEtL._AC_SY625_.jpg" class="product-img">
-            <h3 class="product-title">Premium Leather Sneakers</h3>
-            <a href="https://amzn.to/4ayU76l" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71k51A7uURL._AC_SY625_.jpg" class="product-img">
-            <h3 class="product-title">Sport Running Shoes</h3>
-            <a href="https://amzn.to/4kGhsYf" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61-vOay058L._AC_SY625_.jpg" class="product-img">
-            <h3 class="product-title">Formal Leather Oxford Shoes</h3>
-            <a href="https://amzn.to/4qFm1U2" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71+v9q-C8NL._AC_SY625_.jpg" class="product-img">
-            <h3 class="product-title">Casual Canvas Slip-on Shoes</h3>
-            <a href="https://amzn.to/4qI8viL" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/719f-HTo08L._AC_SY625_.jpg" class="product-img">
-            <h3 class="product-title">Outdoor Hiking & Trekking Boots</h3>
-            <a href="https://amzn.to/4qDqpms" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/718yG6F684L._AC_SY625_.jpg" class="product-img">
-            <h3 class="product-title">Classic Party Wear Loafers</h3>
-            <a href="https://amzn.to/3ZBCcqD" class="amz-btn" target="_blank">View on Amazon</a>
+        <h2 class="section-title">👟 Men's Shoes</h2>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71D9ImsvEtL._AC_SY625_.jpg" alt="Leather Sneakers" loading="lazy" class="product-img"><h3 class="product-title">Premium Leather Sneakers</h3><a href="https://amzn.to/4ayU76l" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71k51A7uURL._AC_SY625_.jpg" alt="Running Shoes" loading="lazy" class="product-img"><h3 class="product-title">Sport Running Shoes</h3><a href="https://amzn.to/4kGhsYf" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61-vOay058L._AC_SY625_.jpg" alt="Oxford Shoes" loading="lazy" class="product-img"><h3 class="product-title">Formal Leather Oxford Shoes</h3><a href="https://amzn.to/4qFm1U2" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71+v9q-C8NL._AC_SY625_.jpg" alt="Slip-on Shoes" loading="lazy" class="product-img"><h3 class="product-title">Casual Canvas Slip-on Shoes</h3><a href="https://amzn.to/4qI8viL" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/719f-HTo08L._AC_SY625_.jpg" alt="Hiking Boots" loading="lazy" class="product-img"><h3 class="product-title">Outdoor Hiking & Trekking Boots</h3><a href="https://amzn.to/4qDqpms" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/718yG6F684L._AC_SY625_.jpg" alt="Party Loafers" loading="lazy" class="product-img"><h3 class="product-title">Classic Party Wear Loafers</h3><a href="https://amzn.to/3ZBCcqD" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Add+Shoe+7" alt="Street Sneakers" loading="lazy" class="product-img"><h3 class="product-title">Casual Street Sneakers</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Add+Shoe+8" alt="Comfort Loafers" loading="lazy" class="product-img"><h3 class="product-title">Premium Comfort Loafers</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Add+Shoe+9" alt="Chelsea Boots" loading="lazy" class="product-img"><h3 class="product-title">Classic Chelsea Boots</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Add+Shoe+10" alt="Sports Shoes" loading="lazy" class="product-img"><h3 class="product-title">Daily Wear Sports Shoes</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
-</div>
-    
+
     <div id="mens-watches" class="category-section">
-    <h2 class="section-title">⌚ Men's Watches</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71O5u0F4F2L._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Luxury Chronograph Silver Watch</h3>
-            <a href="https://amzn.to/3ZGSoXz" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61pD7G7H6BL._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Classic Brown Leather Strap Watch</h3>
-            <a href="https://amzn.to/4rjT80O" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71I9U-878-L._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Rugged Sport Digital Watch</h3>
-            <a href="https://amzn.to/46F9jNY" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71+2I5yK7sL._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Minimalist Analog Black Watch</h3>
-            <a href="https://amzn.to/4rWNIJi" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61XmF6v9P2L._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Smart Fitness Tracker Watch</h3>
-            <a href="https://amzn.to/4ayttdx" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71N15f5p+5L._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Premium Stainless Steel Band Watch</h3>
-            <a href="https://amzn.to/4azqQrU" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71pW-rX2yXL._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Military Tactical Waterproof Watch</h3>
-            <a href="https://amzn.to/4tDdaoL" class="amz-btn" target="_blank">View on Amazon</a>
-        </div>
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61F9uK07FpL._AC_SY679_.jpg" class="product-img">
-            <h3 class="product-title">Deep Blue Casual Dive Watch</h3>
-            <a href="https://amzn.to/4rZidyh" class="amz-btn" target="_blank">View on Amazon</a>
+        <h2 class="section-title">⌚ Men's Watches</h2>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71O5u0F4F2L._AC_SY679_.jpg" alt="Silver Chronograph Watch" loading="lazy" class="product-img"><h3 class="product-title">Luxury Chronograph Silver Watch</h3><a href="https://amzn.to/3ZGSoXz" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61pD7G7H6BL._AC_SY679_.jpg" alt="Leather Strap Watch" loading="lazy" class="product-img"><h3 class="product-title">Classic Brown Leather Strap Watch</h3><a href="https://amzn.to/4rjT80O" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71I9U-878-L._AC_SY679_.jpg" alt="Digital Watch" loading="lazy" class="product-img"><h3 class="product-title">Rugged Sport Digital Watch</h3><a href="https://amzn.to/46F9jNY" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71+2I5yK7sL._AC_SY679_.jpg" alt="Analog Watch" loading="lazy" class="product-img"><h3 class="product-title">Minimalist Analog Black Watch</h3><a href="https://amzn.to/4rWNIJi" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61XmF6v9P2L._AC_SY679_.jpg" alt="Fitness Tracker" loading="lazy" class="product-img"><h3 class="product-title">Smart Fitness Tracker Watch</h3><a href="https://amzn.to/4ayttdx" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71N15f5p+5L._AC_SY679_.jpg" alt="Steel Band Watch" loading="lazy" class="product-img"><h3 class="product-title">Premium Stainless Steel Band Watch</h3><a href="https://amzn.to/4azqQrU" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/71pW-rX2yXL._AC_SY679_.jpg" alt="Waterproof Watch" loading="lazy" class="product-img"><h3 class="product-title">Military Tactical Waterproof Watch</h3><a href="https://amzn.to/4tDdaoL" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://m.media-amazon.com/images/I/61F9uK07FpL._AC_SY679_.jpg" alt="Dive Watch" loading="lazy" class="product-img"><h3 class="product-title">Deep Blue Casual Dive Watch</h3><a href="https://amzn.to/4rZidyh" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Add+Watch+9" alt="Gold Plated Watch" loading="lazy" class="product-img"><h3 class="product-title">Elegant Gold Plated Watch</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
+            <div class="product-card"><img src="https://via.placeholder.com/250/EADBC8/4A403A?text=Add+Watch+10" alt="Office Wear Watch" loading="lazy" class="product-img"><h3 class="product-title">Classic Office Wear Watch</h3><a href="#" class="amz-btn" target="_blank">View on Amazon</a></div>
         </div>
     </div>
-</div>
 
     <div class="footer">
         <p>Disclaimer: As an Amazon Associate, I earn from qualifying purchases.</p>
         <p>&copy; 2026 Global Elegance. All Rights Reserved.</p>
     </div>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            var navBar = document.querySelector(".nav-bar");
+            if (window.scrollY > 50) {
+                navBar.classList.add("shrink");
+            } else {
+                navBar.classList.remove("shrink");
+            }
+        });
+    </script>
 
 </body>
 </html>
